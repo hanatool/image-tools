@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EXIF Viewer - Read Photo Metadata Online</title>
+
+    <meta name="description" content="Modern EXIF Viewer to inspect photo metadata including camera model, GPS, ISO, exposure, and image information online." />
+    <meta name="keywords" content="EXIF Viewer, photo metadata, image metadata, EXIF reader, camera information, GPS photo data" />
+    <meta name="author" content="EXIF Viewer" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="EXIF Viewer - Read Photo Metadata Online" />
+    <meta property="og:description" content="Upload an image and instantly view EXIF metadata information in a clean modern interface." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+</head>
+
+<body class="bg-light text-dark" style="font-family: Inter, sans-serif;">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                    <i class="fa-solid fa-camera-retro text-primary"></i>
+                    EXIF Viewer
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#viewer">Viewer</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+
+            <div class="mx-auto" style="max-width: 850px;">
+
+                <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2">
+                    Modern Photo Metadata Tool
+                </span>
+
+                <h1 class="fw-bold display-5 mb-3">
+                    Read EXIF Metadata From Any Image
+                </h1>
+
+                <p class="lead text-secondary mb-0">
+                    Upload a photo and instantly inspect camera details, exposure settings,
+                    GPS location, timestamps, ISO, focal length, and more in a clean modern interface.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ADVERTISEMENT -->
+    <section class="py-4">
+        <div class="container">
+
+            <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
+
+                <div class="small text-uppercase text-secondary mb-2">
+                    Advertisement
+                </div>
+
+                <div class="py-5">
+                    <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+
+                    <h5 class="fw-semibold">
+                        Your Ad Banner Here
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Responsive advertising space for banners or sponsored content.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VIEWER -->
+    <section class="py-5" id="viewer">
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <div class="bg-white border rounded-4 shadow-sm p-4 p-lg-5">
+
+                        <div class="text-center mb-4">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-image fa-3x text-primary"></i>
+                            </div>
+
+                            <h2 class="fw-bold">
+                                EXIF Metadata Viewer
+                            </h2>
+
+                            <p class="text-secondary mb-0">
+                                Select an image file to analyze metadata information.
+                            </p>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-semibold">
+                                Upload Image
+                            </label>
+
+                            <input
+                                type="file"
+                                class="form-control form-control-lg"
+                                id="imageInput"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+                        <div id="previewContainer" class="d-none mb-4 text-center">
+
+                            <img
+                                id="previewImage"
+                                class="img-fluid rounded-4 border shadow-sm"
+                                alt="Preview"
+                                style="max-height: 450px;"
+                            >
+
+                        </div>
+
+                        <div id="loadingBox" class="d-none">
+
+                            <div class="alert alert-info border-0 rounded-4">
+                                <i class="fa-solid fa-spinner fa-spin me-2"></i>
+                                Reading EXIF metadata...
+                            </div>
+
+                        </div>
+
+                        <div id="emptyState">
+
+                            <div class="border rounded-4 p-5 text-center bg-light">
+
+                                <i class="fa-solid fa-cloud-arrow-up fa-3x text-secondary mb-3"></i>
+
+                                <h5 class="fw-semibold">
+                                    No Image Selected
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    Upload a photo to display EXIF metadata information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div id="resultBox" class="d-none">
+
+                            <div class="table-responsive">
+
+                                <table class="table align-middle table-hover">
+
+                                    <thead>
+                                        <tr>
+                                            <th width="35%">Property</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="metadataTable"></tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="py-5 bg-white border-top" id="about">
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <div class="text-center mb-5">
+
+                        <h2 class="fw-bold">
+                            About This EXIF Viewer
+                        </h2>
+
+                        <p class="text-secondary mb-0">
+                            A lightweight and responsive metadata reader built with Bootstrap and JavaScript.
+                        </p>
+
+                    </div>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded-4 p-4 h-100 bg-light">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-camera text-primary fa-2x"></i>
+                                </div>
+
+                                <h5 class="fw-semibold">
+                                    Camera Information
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    View camera model, lens type, exposure settings, and image dimensions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded-4 p-4 h-100 bg-light">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-location-dot text-primary fa-2x"></i>
+                                </div>
+
+                                <h5 class="fw-semibold">
+                                    GPS Metadata
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    Detect embedded location information stored in supported images.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded-4 p-4 h-100 bg-light">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-mobile-screen text-primary fa-2x"></i>
+                                </div>
+
+                                <h5 class="fw-semibold">
+                                    Mobile Friendly
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    Fully responsive layout optimized for desktop, tablet, and mobile devices.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 border-top bg-white">
+        <div class="container">
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+
+                <div class="text-secondary small">
+                    © 2026 EXIF Viewer. All rights reserved.
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const previewImage = document.getElementById('previewImage');
+        const previewContainer = document.getElementById('previewContainer');
+        const resultBox = document.getElementById('resultBox');
+        const metadataTable = document.getElementById('metadataTable');
+        const emptyState = document.getElementById('emptyState');
+        const loadingBox = document.getElementById('loadingBox');
+
+        imageInput.addEventListener('change', function (event) {
+
+            const file = event.target.files[0];
+
+            if (!file) {
+                return;
+            }
+
+            metadataTable.innerHTML = '';
+            resultBox.classList.add('d-none');
+            previewContainer.classList.add('d-none');
+            emptyState.classList.add('d-none');
+            loadingBox.classList.remove('d-none');
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+
+                previewImage.src = e.target.result;
+                previewContainer.classList.remove('d-none');
+
+                EXIF.getData(file, function () {
+
+                    const allMetaData = EXIF.getAllTags(this);
+
+                    loadingBox.classList.add('d-none');
+                    resultBox.classList.remove('d-none');
+
+                    if (Object.keys(allMetaData).length === 0) {
+
+                        metadataTable.innerHTML = `
+                            <tr>
+                                <td colspan="2" class="text-center text-secondary py-4">
+                                    No EXIF metadata found in this image.
+                                </td>
+                            </tr>
+                        `;
+
+                        return;
+                    }
+
+                    for (const key in allMetaData) {
+
+                        const value = allMetaData[key];
+
+                        const row = document.createElement('tr');
+
+                        row.innerHTML = `
+                            <td class="fw-semibold">${key}</td>
+                            <td>${value}</td>
+                        `;
+
+                        metadataTable.appendChild(row);
+                    }
+
+                });
+
+            };
+
+            reader.readAsDataURL(file);
+
+        });
+    </script>
+
+</body>
+</html>

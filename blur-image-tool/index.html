@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Blur Image Tool to blur photos instantly with a modern responsive interface.">
+    <meta name="keywords" content="blur image, image editor, blur photo online, bootstrap blur tool, image blur app">
+    <meta name="author" content="Blur Image Tool">
+    <meta name="robots" content="index, follow">
+
+    <title>Blur Image Tool</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .hero-box {
+            border-radius: 24px;
+            background: #ffffff;
+        }
+
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            border-radius: 20px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #0d6efd;
+            background: #f8fbff;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        .ad-box {
+            min-height: 120px;
+            border-radius: 20px;
+            background: #ffffff;
+            border: 1px dashed #ced4da;
+        }
+
+        footer {
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>
+                Blur Image Tool
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="py-5">
+        <div class="container">
+            <div class="hero-box shadow-sm p-4 p-lg-5">
+
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold display-5 mb-3">
+                        Blur Your Images Online
+                    </h1>
+
+                    <p class="text-secondary mx-auto" style="max-width: 700px;">
+                        Upload your image and instantly apply blur effects with this fast, modern, and responsive online blur image tool.
+                        Perfect for privacy, creative editing, and social media content.
+                    </p>
+                </div>
+
+                <!-- ADVERTISEMENT -->
+                <div class="ad-box d-flex align-items-center justify-content-center text-secondary mb-5">
+                    <div class="text-center">
+                        <i class="fa-solid fa-rectangle-ad fa-2x mb-2"></i>
+                        <div>Advertisement Space</div>
+                    </div>
+                </div>
+
+                <!-- TOOL -->
+                <div class="row g-4 align-items-center">
+
+                    <!-- LEFT -->
+                    <div class="col-lg-5">
+
+                        <label class="upload-area p-5 text-center w-100 d-block">
+                            <input type="file" id="imageInput" class="d-none" accept="image/*">
+
+                            <div>
+                                <i class="fa-solid fa-cloud-arrow-up fa-3x text-primary mb-3"></i>
+
+                                <h4 class="fw-semibold">
+                                    Upload Image
+                                </h4>
+
+                                <p class="text-secondary mb-0">
+                                    Click here to choose your image
+                                </p>
+                            </div>
+                        </label>
+
+                        <div class="mt-4">
+                            <label class="form-label fw-semibold">
+                                Blur Amount
+                            </label>
+
+                            <input 
+                                type="range" 
+                                class="form-range" 
+                                min="0" 
+                                max="20" 
+                                value="0"
+                                id="blurRange"
+                            >
+                        </div>
+
+                        <button class="btn btn-primary w-100 py-3 rounded-pill mt-3" id="downloadBtn">
+                            <i class="fa-solid fa-download me-2"></i>
+                            Download Image
+                        </button>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="col-lg-7">
+
+                        <div class="bg-light rounded-4 p-3 text-center border">
+
+                            <canvas id="canvas" class="img-fluid rounded-4"></canvas>
+
+                            <div id="emptyState" class="py-5 text-secondary">
+                                <i class="fa-regular fa-image fa-4x mb-3"></i>
+
+                                <h5>
+                                    No Image Selected
+                                </h5>
+
+                                <p class="mb-0">
+                                    Upload an image to start editing
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white rounded-4 shadow-sm p-4 p-lg-5">
+
+                <h2 class="fw-bold mb-4">
+                    Why Use This Blur Image Tool?
+                </h2>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-4 h-100">
+                            <i class="fa-solid fa-bolt text-primary fa-2x mb-3"></i>
+                            <h5 class="fw-semibold">
+                                Fast Processing
+                            </h5>
+                            <p class="text-secondary mb-0">
+                                Blur your photos instantly without complicated editing software.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-4 h-100">
+                            <i class="fa-solid fa-mobile-screen text-primary fa-2x mb-3"></i>
+                            <h5 class="fw-semibold">
+                                Mobile Friendly
+                            </h5>
+                            <p class="text-secondary mb-0">
+                                Fully responsive design that works perfectly on phones and desktops.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-4 h-100">
+                            <i class="fa-solid fa-shield-halved text-primary fa-2x mb-3"></i>
+                            <h5 class="fw-semibold">
+                                Privacy Safe
+                            </h5>
+                            <p class="text-secondary mb-0">
+                                Your images are processed directly in your browser for better privacy.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start gap-3">
+
+                <div>
+                    <h5 class="fw-bold mb-1">
+                        Blur Image Tool
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Modern online image blur editor with Bootstrap UI.
+                    </p>
+                </div>
+
+                <div class="text-secondary">
+                    © 2026 Blur Image Tool. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- IMAGE BLUR SCRIPT -->
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const blurRange = document.getElementById('blurRange');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const emptyState = document.getElementById('emptyState');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        let uploadedImage = new Image();
+
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                uploadedImage.onload = function() {
+                    drawImage();
+                };
+
+                uploadedImage.src = event.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        blurRange.addEventListener('input', drawImage);
+
+        function drawImage() {
+            emptyState.style.display = 'none';
+
+            canvas.width = uploadedImage.width;
+            canvas.height = uploadedImage.height;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.filter = `blur(${blurRange.value}px)`;
+            ctx.drawImage(uploadedImage, 0, 0);
+
+            canvas.classList.remove('d-none');
+        }
+
+        downloadBtn.addEventListener('click', function() {
+            if (!uploadedImage.src) return;
+
+            const link = document.createElement('a');
+            link.download = 'blurred-image.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        });
+    </script>
+
+</body>
+</html>

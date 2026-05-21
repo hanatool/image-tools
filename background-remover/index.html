@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Background Remover - Remove Image Background Online</title>
+
+    <meta name="description" content="Remove image backgrounds instantly with our modern online background remover tool." />
+    <meta name="keywords" content="background remover, remove background, image editor, transparent background" />
+    <meta name="author" content="Background Remover Tool" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <body style="font-family: 'Inter', sans-serif; background: #f8f9fa;">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="bg-white border-bottom sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>
+                    Background Remover
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <a href="#" class="btn btn-primary px-4">
+                                Try Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-8">
+
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2">
+                        AI Powered Tool
+                    </span>
+
+                    <h1 class="display-5 fw-bold text-dark mb-3">
+                        Remove Backgrounds From Images Instantly
+                    </h1>
+
+                    <p class="text-secondary fs-5 mb-4">
+                        Upload your image and remove the background automatically with a clean,
+                        fast, and modern experience.
+                    </p>
+
+                    <div class="bg-white rounded-4 shadow-sm border p-4">
+
+                        <div class="mb-4">
+                            <i class="fa-regular fa-image fa-4x text-primary"></i>
+                        </div>
+
+                        <input
+                            type="file"
+                            class="form-control form-control-lg mb-3"
+                            id="imageInput"
+                            accept="image/*"
+                        />
+
+                        <button class="btn btn-primary btn-lg w-100" id="removeBtn">
+                            <i class="fa-solid fa-scissors me-2"></i>
+                            Remove Background
+                        </button>
+
+                        <div class="mt-4 d-none" id="previewContainer">
+                            <img
+                                id="previewImage"
+                                class="img-fluid rounded-4 border"
+                                alt="Preview"
+                            />
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">Fast Processing</h5>
+
+                        <p class="text-secondary mb-0">
+                            Remove image backgrounds in seconds with smooth and responsive performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-shield-halved fa-2x text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">Secure Uploads</h5>
+
+                        <p class="text-secondary mb-0">
+                            Your uploaded images are processed safely and never shared publicly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-mobile-screen-button fa-2x text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">Mobile Friendly</h5>
+
+                        <p class="text-secondary mb-0">
+                            Fully responsive design that works perfectly on desktop and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white border rounded-4 shadow-sm p-5 text-center">
+
+                <p class="text-uppercase small text-secondary mb-2">
+                    Advertisement
+                </p>
+
+                <div class="py-5">
+                    <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+
+                    <h5 class="fw-semibold">
+                        Your Ad Banner Here
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        728 x 90 Responsive Advertisement Area
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+
+                <div class="mb-3 mb-lg-0">
+                    <h6 class="fw-bold mb-1">
+                        Background Remover
+                    </h6>
+
+                    <p class="text-secondary mb-0 small">
+                        Simple online tool for removing image backgrounds.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#" class="text-secondary text-decoration-none me-3">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="text-secondary text-decoration-none">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const previewImage = document.getElementById('previewImage');
+        const previewContainer = document.getElementById('previewContainer');
+        const removeBtn = document.getElementById('removeBtn');
+
+        imageInput.addEventListener('change', function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewContainer.classList.remove('d-none');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        removeBtn.addEventListener('click', function () {
+            if (!imageInput.files.length) {
+                alert('Please upload an image first.');
+                return;
+            }
+
+            removeBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Processing...';
+
+            setTimeout(() => {
+                removeBtn.innerHTML = '<i class="fa-solid fa-check me-2"></i>Background Removed';
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

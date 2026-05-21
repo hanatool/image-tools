@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modern Screenshot to PDF tool using Bootstrap. Upload screenshots and convert them into high-quality PDF files instantly.">
+    <meta name="keywords" content="Screenshot to PDF, PDF Converter, Image to PDF, Bootstrap PDF Tool">
+    <meta name="author" content="Screenshot to PDF">
+    <meta name="robots" content="index, follow">
+
+    <title>Screenshot to PDF Converter</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <body class="bg-light" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Header -->
+    <header class="bg-white border-bottom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-file-pdf text-danger me-2"></i>
+                    Screenshot to PDF
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+
+                    <div class="bg-white shadow-sm rounded-4 p-4 p-md-5 border">
+
+                        <div class="mb-4">
+                            <span class="badge bg-danger-subtle text-danger px-3 py-2">
+                                Fast & Modern PDF Tool
+                            </span>
+                        </div>
+
+                        <h1 class="fw-bold display-6 text-dark mb-3">
+                            Convert Screenshots to PDF Instantly
+                        </h1>
+
+                        <p class="text-secondary fs-6 mb-4">
+                            Upload multiple screenshots or images and combine them into a clean,
+                            high-quality PDF file directly from your browser.
+                        </p>
+
+                        <!-- Upload Area -->
+                        <div class="border border-2 border-dashed rounded-4 p-5 bg-light mb-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-image fa-3x text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-semibold mb-2">
+                                Upload Screenshots
+                            </h5>
+
+                            <p class="text-secondary small mb-4">
+                                PNG, JPG, JPEG supported
+                            </p>
+
+                            <input 
+                                type="file" 
+                                id="imageInput" 
+                                accept="image/*" 
+                                multiple 
+                                class="form-control mb-4"
+                            >
+
+                            <button 
+                                class="btn btn-danger btn-lg px-4 rounded-pill"
+                                onclick="generatePDF()"
+                            >
+                                <i class="fa-solid fa-file-pdf me-2"></i>
+                                Convert to PDF
+                            </button>
+                        </div>
+
+                        <!-- Preview -->
+                        <div id="previewContainer" class="row g-3"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Space -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white border rounded-4 shadow-sm p-4 text-center">
+
+                <div class="mb-3">
+                    <span class="badge bg-warning text-dark">
+                        Advertisement
+                    </span>
+                </div>
+
+                <h5 class="fw-bold mb-2">
+                    Your Ad Space Here
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    Responsive banner area for Google Ads, affiliate banners,
+                    or promotional content.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <div class="bg-white border rounded-4 shadow-sm p-4 p-md-5">
+
+                        <h2 class="fw-bold mb-4">
+                            Why Use Screenshot to PDF?
+                        </h2>
+
+                        <div class="row g-4">
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100">
+                                    <div class="mb-3">
+                                        <i class="fa-solid fa-bolt text-warning fa-2x"></i>
+                                    </div>
+
+                                    <h5 class="fw-semibold">
+                                        Fast Conversion
+                                    </h5>
+
+                                    <p class="text-secondary small mb-0">
+                                        Convert screenshots into PDF files instantly
+                                        without complicated software.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100">
+                                    <div class="mb-3">
+                                        <i class="fa-solid fa-lock text-success fa-2x"></i>
+                                    </div>
+
+                                    <h5 class="fw-semibold">
+                                        Private & Secure
+                                    </h5>
+
+                                    <p class="text-secondary small mb-0">
+                                        All image processing happens directly in your
+                                        browser for better privacy.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100">
+                                    <div class="mb-3">
+                                        <i class="fa-solid fa-mobile-screen text-primary fa-2x"></i>
+                                    </div>
+
+                                    <h5 class="fw-semibold">
+                                        Mobile Friendly
+                                    </h5>
+
+                                    <p class="text-secondary small mb-0">
+                                        Responsive layout optimized for desktop,
+                                        tablet, and mobile devices.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-secondary small">
+                        © 2026 Screenshot to PDF. All rights reserved.
+                    </span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-secondary me-3">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary me-3">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary me-3">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const previewContainer = document.getElementById('previewContainer');
+
+        let uploadedImages = [];
+
+        imageInput.addEventListener('change', function(event) {
+            previewContainer.innerHTML = '';
+            uploadedImages = [];
+
+            const files = event.target.files;
+
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    uploadedImages.push(e.target.result);
+
+                    const col = document.createElement('div');
+                    col.className = 'col-6 col-md-4';
+
+                    col.innerHTML = `
+                        <div class="bg-white border rounded-4 overflow-hidden shadow-sm">
+                            <img 
+                                src="${e.target.result}" 
+                                class="img-fluid w-100"
+                                alt="Preview"
+                            >
+                        </div>
+                    `;
+
+                    previewContainer.appendChild(col);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+
+        async function generatePDF() {
+
+            if(uploadedImages.length === 0) {
+                alert('Please upload at least one screenshot.');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+
+            for(let i = 0; i < uploadedImages.length; i++) {
+
+                const img = new Image();
+
+                img.src = uploadedImages[i];
+
+                await new Promise(resolve => {
+                    img.onload = resolve;
+                });
+
+                const imgWidth = 190;
+                const pageHeight = 290;
+                const imgHeight = (img.height * imgWidth) / img.width;
+
+                if(i > 0) {
+                    pdf.addPage();
+                }
+
+                pdf.addImage(
+                    uploadedImages[i],
+                    'JPEG',
+                    10,
+                    10,
+                    imgWidth,
+                    imgHeight > pageHeight ? pageHeight : imgHeight
+                );
+            }
+
+            pdf.save('screenshots.pdf');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert images to Base64 online instantly with this free responsive Image to Base64 converter tool." />
+    <meta name="keywords" content="Image to Base64, Base64 Converter, Online Tool, Image Encoder" />
+    <meta name="author" content="Image to Base64 Tool" />
+
+    <title>Image to Base64 Converter</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+                    <i class="fa-solid fa-image me-2 text-primary"></i>
+                    Image to Base64
+                </a>
+
+                <nav>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Home</a>
+                    <a href="#" class="text-decoration-none text-secondary">Tools</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow-1">
+        <div class="container py-5">
+
+            <!-- Description -->
+            <div class="text-center mb-5">
+                <h1 class="fw-bold mb-3">Image to Base64 Converter</h1>
+                <p class="text-secondary mx-auto" style="max-width: 700px;">
+                    Easily convert your image files into Base64 format instantly.
+                    Upload JPG, PNG, WEBP, or GIF images and get the encoded Base64 result in seconds.
+                </p>
+            </div>
+
+            <!-- Ad Space Top -->
+            <div class="mb-4">
+                <div class="bg-white border rounded-4 p-4 text-center text-secondary shadow-sm">
+                    Advertisement Space
+                </div>
+            </div>
+
+            <!-- Converter Card -->
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- Upload -->
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">
+                            <i class="fa-solid fa-upload me-2 text-primary"></i>
+                            Upload Image
+                        </label>
+
+                        <input 
+                            type="file" 
+                            id="imageInput" 
+                            class="form-control form-control-lg"
+                            accept="image/*"
+                        >
+                    </div>
+
+                    <!-- Preview -->
+                    <div class="mb-4 d-none" id="previewContainer">
+                        <label class="form-label fw-semibold">
+                            <i class="fa-solid fa-image me-2 text-primary"></i>
+                            Image Preview
+                        </label>
+
+                        <div class="border rounded-4 bg-light p-3 text-center">
+                            <img 
+                                id="previewImage"
+                                class="img-fluid rounded-3"
+                                alt="Preview"
+                                style="max-height: 300px;"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Result -->
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">
+                            <i class="fa-solid fa-code me-2 text-primary"></i>
+                            Base64 Result
+                        </label>
+
+                        <textarea 
+                            id="base64Output"
+                            class="form-control"
+                            rows="10"
+                            placeholder="Your Base64 result will appear here..."
+                            readonly
+                        ></textarea>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary px-4" id="copyBtn">
+                            <i class="fa-solid fa-copy me-2"></i>
+                            Copy Base64
+                        </button>
+
+                        <button class="btn btn-outline-secondary px-4" id="clearBtn">
+                            <i class="fa-solid fa-trash me-2"></i>
+                            Clear
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Ad Space Bottom -->
+            <div class="mt-4">
+                <div class="bg-white border rounded-4 p-4 text-center text-secondary shadow-sm">
+                    Advertisement Space
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top mt-auto">
+        <div class="container py-4">
+            <div class="text-center text-secondary small">
+                © 2026 Image to Base64 Converter. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const base64Output = document.getElementById('base64Output');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const previewImage = document.getElementById('previewImage');
+        const previewContainer = document.getElementById('previewContainer');
+
+        imageInput.addEventListener('change', function () {
+            const file = this.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const result = e.target.result;
+
+                base64Output.value = result;
+                previewImage.src = result;
+
+                previewContainer.classList.remove('d-none');
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        copyBtn.addEventListener('click', function () {
+            if (!base64Output.value) return;
+
+            navigator.clipboard.writeText(base64Output.value);
+
+            copyBtn.innerHTML = '<i class="fa-solid fa-check me-2"></i>Copied';
+
+            setTimeout(() => {
+                copyBtn.innerHTML = '<i class="fa-solid fa-copy me-2"></i>Copy Base64';
+            }, 2000);
+        });
+
+        clearBtn.addEventListener('click', function () {
+            imageInput.value = '';
+            base64Output.value = '';
+            previewImage.src = '';
+            previewContainer.classList.add('d-none');
+        });
+    </script>
+
+</body>
+</html>

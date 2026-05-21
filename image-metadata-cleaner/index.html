@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Image Metadata Cleaner</title>
+
+  <meta name="description" content="Free online Image Metadata Cleaner tool to remove EXIF, GPS, camera, and hidden metadata from your images instantly." />
+  <meta name="keywords" content="image metadata cleaner, remove exif data, image privacy tool, metadata remover, photo cleaner" />
+  <meta name="author" content="Image Metadata Cleaner" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Image Metadata Cleaner" />
+  <meta property="og:description" content="Remove hidden metadata from your images online for better privacy and security." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+
+<body class="bg-light text-dark">
+
+  <!-- HEADER -->
+  <header class="border-bottom bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+          <i class="fa-solid fa-shield-halved me-2 text-primary"></i>
+          Image Metadata Cleaner
+        </a>
+
+        <nav class="d-none d-md-flex gap-4">
+          <a href="#" class="text-decoration-none text-secondary">Home</a>
+          <a href="#" class="text-decoration-none text-secondary">Features</a>
+          <a href="#" class="text-decoration-none text-secondary">Privacy</a>
+          <a href="#" class="text-decoration-none text-secondary">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-5">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+
+          <div class="mb-4">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2">
+              Privacy Protection Tool
+            </span>
+          </div>
+
+          <h1 class="display-5 fw-bold mb-3">
+            Remove Hidden Metadata From Images
+          </h1>
+
+          <p class="lead text-secondary mb-5">
+            Clean EXIF, GPS location, camera information, and hidden metadata
+            from your photos instantly before sharing them online.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- TOOL -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4 p-md-5">
+
+              <div class="text-center mb-4">
+                <i class="fa-solid fa-image fa-3x text-primary mb-3"></i>
+                <h2 class="h4 fw-semibold">
+                  Upload Your Image
+                </h2>
+              </div>
+
+              <div class="mb-4">
+                <input
+                  type="file"
+                  id="imageInput"
+                  accept="image/*"
+                  class="form-control form-control-lg"
+                />
+              </div>
+
+              <div class="d-grid mb-4">
+                <button
+                  id="cleanBtn"
+                  class="btn btn-primary btn-lg rounded-3"
+                >
+                  <i class="fa-solid fa-broom me-2"></i>
+                  Clean Metadata
+                </button>
+              </div>
+
+              <div
+                id="previewContainer"
+                class="text-center d-none"
+              >
+                <img
+                  id="previewImage"
+                  class="img-fluid rounded-4 border mb-4"
+                  alt="Preview"
+                />
+
+                <div class="d-grid">
+                  <a
+                    id="downloadBtn"
+                    class="btn btn-success btn-lg rounded-3"
+                    download="clean-image.png"
+                  >
+                    <i class="fa-solid fa-download me-2"></i>
+                    Download Clean Image
+                  </a>
+                </div>
+              </div>
+
+              <div
+                id="alertBox"
+                class="alert alert-danger mt-4 d-none"
+                role="alert"
+              ></div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section class="pb-5">
+    <div class="container">
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4 text-center">
+              <i class="fa-solid fa-location-dot fa-2x text-primary mb-3"></i>
+              <h3 class="h5 fw-bold">Remove GPS Data</h3>
+              <p class="text-secondary mb-0">
+                Delete location information embedded inside photos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4 text-center">
+              <i class="fa-solid fa-camera fa-2x text-primary mb-3"></i>
+              <h3 class="h5 fw-bold">Hide Camera Info</h3>
+              <p class="text-secondary mb-0">
+                Remove camera model and device information for privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4 text-center">
+              <i class="fa-solid fa-lock fa-2x text-primary mb-3"></i>
+              <h3 class="h5 fw-bold">Protect Privacy</h3>
+              <p class="text-secondary mb-0">
+                Share clean images safely across websites and social media.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ADVERTISEMENT -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="card border-0 bg-white shadow-sm rounded-4">
+        <div class="card-body text-center p-5">
+
+          <p class="text-uppercase small text-secondary mb-2">
+            Advertisement
+          </p>
+
+          <div class="border rounded-4 py-5 bg-light">
+            <h4 class="fw-bold mb-2">Ad Space</h4>
+            <p class="text-secondary mb-0">
+              Google AdSense or Banner Advertisement Area
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-4">
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="fw-bold">
+            <i class="fa-solid fa-shield-halved me-2 text-primary"></i>
+            Image Metadata Cleaner
+          </div>
+        </div>
+
+        <div class="col-md-6 text-center text-md-end">
+          <small class="text-secondary">
+            © 2026 Image Metadata Cleaner. All rights reserved.
+          </small>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const imageInput = document.getElementById("imageInput");
+    const cleanBtn = document.getElementById("cleanBtn");
+    const previewContainer = document.getElementById("previewContainer");
+    const previewImage = document.getElementById("previewImage");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const alertBox = document.getElementById("alertBox");
+
+    let selectedFile = null;
+
+    imageInput.addEventListener("change", function (event) {
+      selectedFile = event.target.files[0];
+
+      alertBox.classList.add("d-none");
+
+      if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+          previewContainer.classList.remove("d-none");
+        };
+
+        reader.readAsDataURL(selectedFile);
+      }
+    });
+
+    cleanBtn.addEventListener("click", function () {
+
+      if (!selectedFile) {
+        alertBox.textContent = "Please upload an image first.";
+        alertBox.classList.remove("d-none");
+        return;
+      }
+
+      const img = new Image();
+
+      img.onload = function () {
+
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        ctx.drawImage(img, 0, 0);
+
+        const cleanedImage = canvas.toDataURL("image/png");
+
+        previewImage.src = cleanedImage;
+        downloadBtn.href = cleanedImage;
+
+      };
+
+      img.src = URL.createObjectURL(selectedFile);
+
+    });
+  </script>
+
+</body>
+</html>
