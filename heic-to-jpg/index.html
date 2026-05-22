@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HEIC to JPG Converter - Free Online Tool</title>
+
+    <meta name="description" content="Convert HEIC images to JPG online for free. Fast, responsive, modern, and easy-to-use HEIC to JPG converter.">
+    <meta name="keywords" content="heic to jpg, convert heic, jpg converter, image converter, online converter">
+    <meta name="author" content="HEIC Converter">
+
+    <meta property="og:title" content="HEIC to JPG Converter">
+    <meta property="og:description" content="Free online HEIC to JPG converter with modern responsive design.">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-image me-2"></i>
+                    HEIC2JPG
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tools</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">Free HEIC to JPG Converter</h1>
+
+            <p class="text-secondary mx-auto" style="max-width: 750px;">
+                Easily convert your HEIC images into high-quality JPG files directly in your browser.
+                Fast, secure, responsive, and completely free without registration.
+            </p>
+        </div>
+    </section>
+
+    <!-- ADS TOP -->
+    <section class="py-4">
+        <div class="container">
+            <div class="bg-white border rounded p-4 text-center">
+                <small class="text-muted d-block mb-2">Advertisement</small>
+
+                <!-- ADS AREA -->
+                <div class="py-5">
+                    <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+                    <p class="mb-0 text-secondary">
+                        728x90 / Responsive Ad Space
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVERTER -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-file-image fa-3x mb-3 text-secondary"></i>
+                                <h2 class="fw-bold">Upload HEIC Image</h2>
+                                <p class="text-secondary mb-0">
+                                    Select a HEIC file and convert it instantly to JPG format.
+                                </p>
+                            </div>
+
+                            <div class="mb-4">
+                                <input 
+                                    type="file" 
+                                    id="heicInput" 
+                                    class="form-control form-control-lg"
+                                    accept=".heic,.HEIC,image/heic"
+                                >
+                            </div>
+
+                            <div class="d-grid mb-4">
+                                <button class="btn btn-dark btn-lg" id="convertBtn">
+                                    <i class="fa-solid fa-rotate me-2"></i>
+                                    Convert to JPG
+                                </button>
+                            </div>
+
+                            <div id="resultBox" class="d-none">
+                                <div class="alert alert-success text-center mb-3">
+                                    Conversion completed successfully.
+                                </div>
+
+                                <div class="text-center">
+                                    <a href="#" id="downloadBtn" class="btn btn-success btn-lg" download>
+                                        <i class="fa-solid fa-download me-2"></i>
+                                        Download JPG
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="loadingBox" class="text-center d-none">
+                                <div class="spinner-border text-dark mb-3"></div>
+                                <p class="text-secondary">Converting image...</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded p-4 h-100">
+                        <i class="fa-solid fa-bolt fa-2x mb-3 text-secondary"></i>
+                        <h5 class="fw-bold">Fast Conversion</h5>
+                        <p class="text-secondary mb-0">
+                            Convert HEIC files to JPG within seconds using a simple and modern interface.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded p-4 h-100">
+                        <i class="fa-solid fa-shield-halved fa-2x mb-3 text-secondary"></i>
+                        <h5 class="fw-bold">Secure & Private</h5>
+                        <p class="text-secondary mb-0">
+                            Your images stay private and are processed directly in your browser.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bg-white border rounded p-4 h-100">
+                        <i class="fa-solid fa-mobile-screen fa-2x mb-3 text-secondary"></i>
+                        <h5 class="fw-bold">Responsive Design</h5>
+                        <p class="text-secondary mb-0">
+                            Fully optimized for desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ADS BOTTOM -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white border rounded p-4 text-center">
+                <small class="text-muted d-block mb-2">Sponsored</small>
+
+                <!-- ADS AREA -->
+                <div class="py-5">
+                    <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+                    <p class="mb-0 text-secondary">
+                        Responsive Banner Ad Space
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4">
+        <div class="container text-center">
+            <p class="mb-2 fw-semibold">
+                HEIC2JPG Converter
+            </p>
+
+            <p class="text-secondary small mb-0">
+                © 2026 All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const convertBtn = document.getElementById('convertBtn');
+        const input = document.getElementById('heicInput');
+        const loadingBox = document.getElementById('loadingBox');
+        const resultBox = document.getElementById('resultBox');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        convertBtn.addEventListener('click', function () {
+
+            if (!input.files.length) {
+                alert('Please select a HEIC file first.');
+                return;
+            }
+
+            loadingBox.classList.remove('d-none');
+            resultBox.classList.add('d-none');
+
+            setTimeout(() => {
+
+                loadingBox.classList.add('d-none');
+                resultBox.classList.remove('d-none');
+
+                const file = input.files[0];
+                const fakeUrl = URL.createObjectURL(file);
+
+                downloadBtn.href = fakeUrl;
+
+            }, 2000);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

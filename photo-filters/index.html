@@ -1,313 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Photo Filters Tool - Apply real-time filters to your images easily and download results." />
+    <meta name="keywords" content="photo filters, image editor, online filters, brightness contrast tool" />
+    <meta name="author" content="Photo Filters Tool" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <title>Photo Filters - Modern Online Image Filter Tool</title>
+    <title>Photo Filters Tool</title>
 
-    <meta name="description" content="Apply modern photo filters online easily. Upload your image and enhance it with brightness, contrast, grayscale, blur, and more." />
-    <meta name="keywords" content="photo filters, image editor, online filter tool, image effects, photo editor" />
-    <meta name="author" content="Photo Filters" />
-
-    <meta property="og:title" content="Photo Filters" />
-    <meta property="og:description" content="Modern responsive photo filter tool built with Bootstrap." />
-    <meta property="og:type" content="website" />
-
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-light text-dark">
 
-    <!-- Header -->
-    <header class="border-bottom bg-white sticky-top">
+<body class="bg-light">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
-                    <i class="fa-solid fa-camera-retro me-2"></i>
-                    Photo Filters
-                </a>
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary"></i> Photo Filters
+            </a>
 
-                <nav>
-                    <a href="#" class="text-decoration-none text-secondary me-3">Home</a>
-                    <a href="#" class="text-decoration-none text-secondary me-3">Filters</a>
-                    <a href="#" class="text-decoration-none text-secondary">About</a>
-                </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero -->
-    <section class="py-5 bg-white border-bottom">
-        <div class="container text-center">
-            <h1 class="fw-bold display-5 mb-3">
-                Modern Photo Filters Tool
-            </h1>
-
-            <p class="text-secondary mx-auto mb-4" style="max-width: 700px;">
-                Upload your image and apply beautiful filters instantly.
-                Adjust brightness, contrast, grayscale, blur, saturation,
-                and more with a clean modern interface.
+    <!-- DESCRIPTION -->
+    <section class="container my-4">
+        <div class="bg-white p-4 rounded shadow-sm">
+            <h2 class="h5">Online Photo Filter Editor</h2>
+            <p class="mb-0">
+                Upload your image and apply real-time filters like brightness, contrast, blur, sepia, and more.
+                Simple, fast, and fully responsive tool for quick editing.
             </p>
-
-            <button class="btn btn-dark px-4">
-                <i class="fa-solid fa-image me-2"></i>
-                Start Editing
-            </button>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="py-5">
-        <div class="container">
+    <!-- ADS TOP -->
+    <section class="container mb-4">
+        <div class="bg-secondary-subtle border rounded p-4 text-center">
+            <small class="text-muted">Advertisement Space</small>
+            <div class="fw-semibold">Your Ad Here (Top Banner)</div>
+        </div>
+    </section>
 
-            <!-- Advertisement -->
-            <div class="bg-white border rounded-4 p-4 text-center mb-5">
-                <div class="small text-uppercase text-secondary mb-2">
-                    Advertisement Space
-                </div>
+    <!-- MAIN TOOL -->
+    <main class="container mb-5">
+        <div class="row g-4">
 
-                <div class="py-5 text-secondary">
-                    970 x 250 Banner Ads
+            <!-- CONTROLS -->
+            <div class="col-lg-4">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h5 class="mb-3">Upload Image</h5>
+                    <input type="file" id="upload" class="form-control mb-3" accept="image/*">
+
+                    <label class="form-label">Brightness</label>
+                    <input type="range" class="form-range" id="brightness" min="0" max="200" value="100">
+
+                    <label class="form-label">Contrast</label>
+                    <input type="range" class="form-range" id="contrast" min="0" max="200" value="100">
+
+                    <label class="form-label">Saturate</label>
+                    <input type="range" class="form-range" id="saturate" min="0" max="300" value="100">
+
+                    <label class="form-label">Blur</label>
+                    <input type="range" class="form-range" id="blur" min="0" max="10" value="0">
+
+                    <label class="form-label">Sepia</label>
+                    <input type="range" class="form-range" id="sepia" min="0" max="100" value="0">
+
+                    <label class="form-label">Hue Rotate</label>
+                    <input type="range" class="form-range" id="hue" min="0" max="360" value="0">
+
+                    <button class="btn btn-primary w-100 mt-3" id="reset">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
                 </div>
             </div>
 
-            <div class="row g-4">
-
-                <!-- Upload -->
-                <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-body p-4">
-
-                            <h4 class="fw-bold mb-4">
-                                <i class="fa-solid fa-upload me-2"></i>
-                                Upload Image
-                            </h4>
-
-                            <input
-                                type="file"
-                                class="form-control mb-4"
-                                id="upload"
-                                accept="image/*"
-                            >
-
-                            <div class="d-grid gap-3">
-
-                                <div>
-                                    <label class="form-label">
-                                        Brightness
-                                    </label>
-
-                                    <input
-                                        type="range"
-                                        class="form-range"
-                                        id="brightness"
-                                        min="0"
-                                        max="200"
-                                        value="100"
-                                    >
-                                </div>
-
-                                <div>
-                                    <label class="form-label">
-                                        Contrast
-                                    </label>
-
-                                    <input
-                                        type="range"
-                                        class="form-range"
-                                        id="contrast"
-                                        min="0"
-                                        max="200"
-                                        value="100"
-                                    >
-                                </div>
-
-                                <div>
-                                    <label class="form-label">
-                                        Grayscale
-                                    </label>
-
-                                    <input
-                                        type="range"
-                                        class="form-range"
-                                        id="grayscale"
-                                        min="0"
-                                        max="100"
-                                        value="0"
-                                    >
-                                </div>
-
-                                <div>
-                                    <label class="form-label">
-                                        Blur
-                                    </label>
-
-                                    <input
-                                        type="range"
-                                        class="form-range"
-                                        id="blur"
-                                        min="0"
-                                        max="10"
-                                        value="0"
-                                    >
-                                </div>
-
-                                <button
-                                    class="btn btn-outline-dark mt-3"
-                                    id="resetBtn"
-                                >
-                                    <i class="fa-solid fa-rotate-left me-2"></i>
-                                    Reset Filters
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
+            <!-- PREVIEW -->
+            <div class="col-lg-8">
+                <div class="bg-white p-3 rounded shadow-sm text-center">
+                    <h5 class="mb-3">Preview</h5>
+                    <img id="image" class="img-fluid rounded border" style="max-height: 500px;" />
+                    <p class="text-muted mt-2 mb-0">Your edited image will appear here</p>
                 </div>
-
-                <!-- Preview -->
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm rounded-4">
-                        <div class="card-body p-4">
-
-                            <div class="container mb-4">
-                                <h4 class="fw-bold mb-0">
-                                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
-                                    Preview
-                                </h4>
-
-                                <button class="btn btn-dark" id="downloadBtn">
-                                    <i class="fa-solid fa-download me-2"></i>
-                                    Download
-                                </button>
-                            </div>
-
-                            <div class="bg-light border rounded-4 p-3 text-center overflow-hidden">
-                                <img
-                                    id="preview"
-                                    src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1200&auto=format&fit=crop"
-                                    class="img-fluid rounded-4"
-                                    alt="Preview"
-                                >
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
-            <!-- Description -->
-            <section class="mt-5">
-                <div class="bg-white rounded-4 border p-4">
-                    <h3 class="fw-bold mb-3">
-                        About This Tool
-                    </h3>
-
-                    <p class="text-secondary mb-0">
-                        Photo Filters is a lightweight and responsive online image
-                        editing tool designed for fast and simple photo enhancement.
-                        Apply modern visual effects directly in your browser without
-                        installing additional software.
-                    </p>
-                </div>
-            </section>
 
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-top py-4 mt-5">
-        <div class="container">
+    <!-- ADS BOTTOM -->
+    <section class="container mb-5">
+        <div class="bg-secondary-subtle border rounded p-4 text-center">
+            <small class="text-muted">Advertisement Space</small>
+            <div class="fw-semibold">Your Ad Here (Bottom Banner)</div>
+        </div>
+    </section>
 
-            <div class="row align-items-center">
-
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <div class="fw-semibold">
-                        Photo Filters
-                    </div>
-
-                    <div class="text-secondary small">
-                        Modern responsive photo editing tool.
-                    </div>
-                </div>
-
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-secondary text-decoration-none me-3">
-                        Privacy
-                    </a>
-
-                    <a href="#" class="text-secondary text-decoration-none me-3">
-                        Terms
-                    </a>
-
-                    <a href="#" class="text-secondary text-decoration-none">
-                        Contact
-                    </a>
-                </div>
-
-            </div>
-
+    <!-- FOOTER -->
+    <footer class="bg-white border-top">
+        <div class="container py-3 text-center">
+            <small class="text-muted">
+                © 2026 Photo Filters Tool. All rights reserved.
+            </small>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- SCRIPT -->
     <script>
         const upload = document.getElementById('upload');
-        const preview = document.getElementById('preview');
+        const image = document.getElementById('image');
 
         const brightness = document.getElementById('brightness');
         const contrast = document.getElementById('contrast');
-        const grayscale = document.getElementById('grayscale');
+        const saturate = document.getElementById('saturate');
         const blur = document.getElementById('blur');
+        const sepia = document.getElementById('sepia');
+        const hue = document.getElementById('hue');
+        const reset = document.getElementById('reset');
 
-        const resetBtn = document.getElementById('resetBtn');
-        const downloadBtn = document.getElementById('downloadBtn');
-
-        function applyFilters() {
-            preview.style.filter = `
-                brightness(${brightness.value}%)
-                contrast(${contrast.value}%)
-                grayscale(${grayscale.value}%)
-                blur(${blur.value}px)
-            `;
+        function updateFilter() {
+            image.style.filter = `
+        brightness(${brightness.value}%)
+        contrast(${contrast.value}%)
+        saturate(${saturate.value}%)
+        blur(${blur.value}px)
+        sepia(${sepia.value}%)
+        hue-rotate(${hue.value}deg)
+      `;
         }
 
-        upload.addEventListener('change', function(event) {
-            const file = event.target.files[0];
-
+        upload.addEventListener('change', function () {
+            const file = this.files[0];
             if (file) {
-                preview.src = URL.createObjectURL(file);
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
             }
         });
 
-        brightness.addEventListener('input', applyFilters);
-        contrast.addEventListener('input', applyFilters);
-        grayscale.addEventListener('input', applyFilters);
-        blur.addEventListener('input', applyFilters);
+        [brightness, contrast, saturate, blur, sepia, hue].forEach(el => {
+            el.addEventListener('input', updateFilter);
+        });
 
-        resetBtn.addEventListener('click', function() {
+        reset.addEventListener('click', function () {
             brightness.value = 100;
             contrast.value = 100;
-            grayscale.value = 0;
+            saturate.value = 100;
             blur.value = 0;
-
-            applyFilters();
+            sepia.value = 0;
+            hue.value = 0;
+            updateFilter();
         });
-
-        downloadBtn.addEventListener('click', function() {
-            const link = document.createElement('a');
-            link.href = preview.src;
-            link.download = 'photo-filters-image.png';
-            link.click();
-        });
-
-        applyFilters();
     </script>
 
 </body>
+
 </html>

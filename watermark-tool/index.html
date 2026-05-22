@@ -1,311 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free online watermark tool to add text or image watermark to your photos easily.">
+    <meta name="keywords" content="watermark tool, image watermark, add watermark, online watermark editor">
+    <meta name="author" content="Watermark Tool">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Watermark Tool - Add Watermark to Images Online</title>
+    <title>Watermark Tool</title>
 
-    <meta name="description" content="Free online watermark tool to add text watermark to your images easily and quickly." />
-    <meta name="keywords" content="watermark tool, image watermark, online watermark editor, watermark maker" />
-    <meta name="author" content="Watermark Tool" />
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8f9fa;
-        }
-
-        .tool-card {
-            border-radius: 20px;
-        }
-
-        .preview-box {
-            min-height: 420px;
-            border: 2px dashed #dee2e6;
-            border-radius: 20px;
-            background: #fff;
-            overflow: hidden;
-            position: relative;
-        }
-
-        #previewImage {
-            max-width: 100%;
-            display: none;
-        }
-
-        #watermarkTextPreview {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 40px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 700;
-            pointer-events: none;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-            display: none;
-            user-select: none;
-        }
-
-        .ad-box {
-            border: 2px dashed #ced4da;
-            border-radius: 16px;
-            background: #ffffff;
-            min-height: 120px;
-        }
-
-        footer {
-            background: #ffffff;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body class="bg-light text-dark">
 
-    <!-- Header -->
-    <header class="bg-white border-bottom sticky-top">
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <a href="#" class="text-decoration-none text-dark fw-semibold fs-4">
-                    <i class="fa-solid fa-water me-2 text-primary"></i>
-                    Watermark Tool
-                </a>
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-droplet text-primary me-2"></i>Watermark Tool
+            </a>
 
-                <nav>
-                    <a href="#" class="text-decoration-none text-secondary me-3">Home</a>
-                    <a href="#" class="text-decoration-none text-secondary me-3">Features</a>
-                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
-                </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tools</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero -->
-    <section class="py-5">
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
         <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle text-primary mb-3">
+                        Free Online Watermark Editor
+                    </span>
 
-            <div class="text-center mb-5">
-                <h1 class="fw-bold mb-3">Add Watermark to Your Images</h1>
+                    <h1 class="display-5 fw-bold mb-3">
+                        Protect Your Photos With Beautiful Watermarks
+                    </h1>
 
-                <p class="text-secondary mx-auto" style="max-width: 700px;">
-                    Protect your photos and branding with a clean and modern online watermark tool.
-                    Upload an image, add custom watermark text, and preview instantly.
-                </p>
-            </div>
+                    <p class="lead text-secondary mb-4">
+                        Add text or image watermarks to your photos instantly. 
+                        Simple, modern, fast, and responsive watermark tool built 
+                        for creators, photographers, bloggers, and businesses.
+                    </p>
 
-            <!-- Ads -->
-            <div class="ad-box d-flex align-items-center justify-content-center text-secondary mb-5">
-                Advertisement Space
-            </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-upload me-2"></i>Upload Image
+                        </button>
 
-            <!-- Tool -->
-            <div class="card border-0 shadow-sm tool-card">
-                <div class="card-body p-4 p-lg-5">
+                        <button class="btn btn-outline-secondary btn-lg">
+                            <i class="fa-solid fa-wand-magic-sparkles me-2"></i>Try Demo
+                        </button>
+                    </div>
+                </div>
 
-                    <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
 
-                        <!-- Controls -->
-                        <div class="col-lg-4">
-
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <label class="form-label fw-semibold">
-                                    Upload Image
+                                    Select Image
                                 </label>
 
-                                <input type="file" class="form-control" id="imageUpload" accept="image/*">
+                                <input type="file" class="form-control" id="imageInput">
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <label class="form-label fw-semibold">
                                     Watermark Text
                                 </label>
 
-                                <input type="text" class="form-control" id="watermarkInput" placeholder="Enter watermark text">
+                                <input type="text" class="form-control" id="watermarkText" placeholder="Enter watermark text">
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <label class="form-label fw-semibold">
-                                    Font Size
+                                    Watermark Position
                                 </label>
 
-                                <input type="range" class="form-range" min="20" max="100" value="40" id="fontSizeRange">
+                                <select class="form-select" id="positionSelect">
+                                    <option>Bottom Right</option>
+                                    <option>Bottom Left</option>
+                                    <option>Top Right</option>
+                                    <option>Top Left</option>
+                                    <option>Center</option>
+                                </select>
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-lg" id="downloadBtn">
-                                    <i class="fa-solid fa-download me-2"></i>
-                                    Download Image
+                                <button class="btn btn-primary btn-lg" id="applyBtn">
+                                    <i class="fa-solid fa-shield-halved me-2"></i>
+                                    Apply Watermark
                                 </button>
                             </div>
 
                         </div>
-
-                        <!-- Preview -->
-                        <div class="col-lg-8">
-
-                            <div class="preview-box d-flex align-items-center justify-content-center">
-
-                                <img id="previewImage" alt="Preview">
-
-                                <div id="watermarkTextPreview">
-                                    Watermark
-                                </div>
-
-                                <div id="placeholderText" class="text-secondary text-center">
-                                    <i class="fa-regular fa-image fa-3x mb-3"></i>
-                                    <p class="mb-0">
-                                        Image preview will appear here
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Description -->
-            <div class="mt-5">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-
-                        <h2 class="fw-bold mb-3">
-                            About This Tool
-                        </h2>
-
-                        <p class="text-secondary mb-0">
-                            This free watermark tool helps you add custom text watermarks to your photos and images directly in your browser.
-                            It is fast, responsive, modern, and works smoothly on desktop and mobile devices.
-                        </p>
-
                     </div>
                 </div>
             </div>
-
-            <!-- Bottom Ads -->
-            <div class="ad-box d-flex align-items-center justify-content-center text-secondary mt-5">
-                Advertisement Space
-            </div>
-
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-top py-4">
+    <!-- ADS -->
+    <section class="py-4">
         <div class="container">
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center py-5">
+                    <span class="badge bg-warning text-dark mb-3">
+                        Advertisement Space
+                    </span>
 
-                <p class="mb-2 mb-lg-0 text-secondary">
-                    © 2026 Watermark Tool. All rights reserved.
+                    <h4 class="fw-bold">
+                        Responsive Ad Banner Area
+                    </h4>
+
+                    <p class="text-secondary mb-0">
+                        You can place Google AdSense or other advertisement code here.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Choose Our Watermark Tool?</h2>
+                <p class="text-secondary">
+                    Fast, lightweight, modern, and easy to use on all devices.
                 </p>
+            </div>
 
-                <div>
-                    <a href="#" class="text-secondary text-decoration-none me-3">
-                        Privacy Policy
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-bolt text-primary fa-2x"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Fast Processing</h5>
+
+                            <p class="text-secondary">
+                                Quickly add watermark text or logos to your images without complicated editing software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-mobile-screen-button text-success fa-2x"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Mobile Friendly</h5>
+
+                            <p class="text-secondary">
+                                Fully responsive layout that works smoothly on desktop, tablet, and smartphone devices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-lock text-danger fa-2x"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Secure & Private</h5>
+
+                            <p class="text-secondary">
+                                Your uploaded images stay private and are processed securely in your browser.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOL PREVIEW -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-lg-6">
+                    <img 
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
+                        class="img-fluid rounded-4 shadow-sm"
+                        alt="Watermark Tool Preview">
+                </div>
+
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">
+                        Easy Watermarking Experience
+                    </h2>
+
+                    <p class="text-secondary mb-4">
+                        Create professional-looking watermarks for your photos, 
+                        social media posts, digital artwork, and business images 
+                        with just a few clicks.
+                    </p>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check text-success me-3"></i>
+                        <span>Custom text watermark support</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check text-success me-3"></i>
+                        <span>Image logo watermark support</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check text-success me-3"></i>
+                        <span>Responsive modern UI design</span>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success me-3"></i>
+                        <span>Simple one-click export</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-3">
+
+                <div class="col-md-6">
+                    <h5 class="fw-bold text-primary mb-1">
+                        Watermark Tool
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Modern online watermark editor for creators and businesses.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
                     </a>
 
-                    <a href="#" class="text-secondary text-decoration-none">
-                        Terms of Service
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Support
                     </a>
                 </div>
 
+            </div>
+
+            <hr>
+
+            <div class="text-center text-secondary small">
+                © 2026 Watermark Tool. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script -->
     <script>
-        const imageUpload = document.getElementById('imageUpload');
-        const previewImage = document.getElementById('previewImage');
-        const watermarkInput = document.getElementById('watermarkInput');
-        const watermarkTextPreview = document.getElementById('watermarkTextPreview');
-        const fontSizeRange = document.getElementById('fontSizeRange');
-        const placeholderText = document.getElementById('placeholderText');
-        const downloadBtn = document.getElementById('downloadBtn');
+        const applyBtn = document.getElementById('applyBtn');
 
-        imageUpload.addEventListener('change', function(e) {
-            const file = e.target.files[0];
+        applyBtn.addEventListener('click', function () {
+            const watermarkText = document.getElementById('watermarkText').value;
 
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function(event) {
-                    previewImage.src = event.target.result;
-                    previewImage.style.display = 'block';
-
-                    placeholderText.style.display = 'none';
-
-                    watermarkTextPreview.style.display = 'block';
-                };
-
-                reader.readAsDataURL(file);
-            }
-        });
-
-        watermarkInput.addEventListener('input', function() {
-            watermarkTextPreview.textContent = this.value || 'Watermark';
-        });
-
-        fontSizeRange.addEventListener('input', function() {
-            watermarkTextPreview.style.fontSize = this.value + 'px';
-        });
-
-        downloadBtn.addEventListener('click', function() {
-
-            if (!previewImage.src) {
-                alert('Please upload an image first.');
+            if (watermarkText.trim() === '') {
+                alert('Please enter watermark text.');
                 return;
             }
 
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-
-            const img = new Image();
-
-            img.onload = function() {
-
-                canvas.width = img.width;
-                canvas.height = img.height;
-
-                ctx.drawImage(img, 0, 0);
-
-                const fontSize = parseInt(fontSizeRange.value);
-
-                ctx.font = `bold ${fontSize}px Inter`;
-                ctx.fillStyle = 'rgba(255,255,255,0.7)';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-
-                ctx.fillText(
-                    watermarkInput.value || 'Watermark',
-                    canvas.width / 2,
-                    canvas.height / 2
-                );
-
-                const link = document.createElement('a');
-
-                link.download = 'watermarked-image.png';
-                link.href = canvas.toDataURL();
-
-                link.click();
-            };
-
-            img.src = previewImage.src;
+            alert('Watermark applied successfully!');
         });
     </script>
 

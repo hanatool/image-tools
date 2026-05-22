@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Image Enhancer helps improve image quality instantly with smart AI enhancement tools.">
+    <meta name="keywords" content="AI Image Enhancer, Photo Enhancer, AI Upscaler, HD Image, Improve Image Quality">
+    <meta name="author" content="AI Image Enhancer">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>AI Image Enhancer</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>AI Image Enhancer
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+                    <span class="badge bg-light text-dark border mb-3">
+                        AI Powered Enhancement
+                    </span>
+
+                    <h1 class="fw-bold display-5 mb-3">
+                        Enhance Your Images with Smart AI Technology
+                    </h1>
+
+                    <p class="text-secondary mb-4">
+                        Improve photo quality instantly using advanced AI enhancement tools. 
+                        Upscale blurry images, sharpen details, reduce noise, and create 
+                        high-quality visuals in seconds with a clean and modern experience.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-dark btn-lg">
+                            <i class="fa-solid fa-upload me-2"></i>Upload Image
+                        </button>
+
+                        <button class="btn btn-outline-dark btn-lg">
+                            <i class="fa-solid fa-circle-play me-2"></i>Live Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="border rounded-4 p-5 text-center bg-light">
+                                <i class="fa-regular fa-image fa-4x text-secondary mb-4"></i>
+
+                                <h5 class="fw-semibold mb-2">
+                                    Drag & Drop Your Image
+                                </h5>
+
+                                <p class="text-secondary mb-4">
+                                    JPG, PNG, WEBP supported
+                                </p>
+
+                                <input type="file" class="form-control mb-3" id="imageInput">
+
+                                <button class="btn btn-dark w-100" id="enhanceBtn">
+                                    <i class="fa-solid fa-bolt me-2"></i>Enhance Image
+                                </button>
+                            </div>
+
+                            <div class="mt-4 d-none" id="resultBox">
+                                <div class="alert alert-success mb-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Your image enhancement process has started successfully.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Powerful AI Features</h2>
+                <p class="text-secondary">
+                    Modern AI tools designed for creators, designers, and photographers.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-expand fa-2x"></i>
+                            </div>
+                            <h5 class="fw-semibold">AI Upscaling</h5>
+                            <p class="text-secondary">
+                                Increase image resolution without losing important details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-wand-magic fa-2x"></i>
+                            </div>
+                            <h5 class="fw-semibold">Auto Enhancement</h5>
+                            <p class="text-secondary">
+                                Automatically improve lighting, contrast, and sharpness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-shield-halved fa-2x"></i>
+                            </div>
+                            <h5 class="fw-semibold">Secure Processing</h5>
+                            <p class="text-secondary">
+                                Your uploaded images stay private and protected.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ADS SECTION -->
+    <section class="py-4">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body text-center p-5 bg-white">
+                    <span class="badge bg-secondary mb-3">Advertisement</span>
+
+                    <h5 class="fw-bold mb-2">
+                        Your Ad Space Here
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Responsive advertisement area for banners, affiliate products, or promotions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <h2 class="fw-bold mb-4">
+                        About AI Image Enhancer
+                    </h2>
+
+                    <p class="text-secondary">
+                        AI Image Enhancer is a modern online platform designed to improve 
+                        photo quality using intelligent artificial intelligence technology. 
+                        Whether you need to sharpen blurry photos, upscale low-resolution 
+                        images, or enhance colors and details, this tool helps you create 
+                        professional-looking visuals quickly and easily.
+                    </p>
+
+                    <p class="text-secondary">
+                        Built with a clean and responsive interface, the platform works 
+                        perfectly on desktop, tablet, and mobile devices. Users can upload 
+                        images, process them instantly, and enjoy a fast experience with 
+                        minimal distractions and a modern light-themed design.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 border-top bg-white">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+
+                <div>
+                    <h6 class="fw-bold mb-1">
+                        AI Image Enhancer
+                    </h6>
+
+                    <small class="text-secondary">
+                        Smart AI tools for better image quality.
+                    </small>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-dark">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </a>
+
+                    <a href="#" class="text-dark">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+
+                    <a href="#" class="text-dark">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                    </a>
+
+                    <a href="#" class="text-dark">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center text-secondary small">
+                © 2026 AI Image Enhancer. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const enhanceBtn = document.getElementById('enhanceBtn');
+        const resultBox = document.getElementById('resultBox');
+        const imageInput = document.getElementById('imageInput');
+
+        enhanceBtn.addEventListener('click', function () {
+
+            if(imageInput.files.length > 0){
+                resultBox.classList.remove('d-none');
+            } else {
+                alert('Please upload an image first.');
+            }
+
+        });
+    </script>
+
+</body>
+</html>

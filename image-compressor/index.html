@@ -1,260 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free online image compressor tool to reduce image size while maintaining quality. Fast, responsive, and easy to use.">
+    <meta name="keywords" content="image compressor, compress image, reduce image size, online image optimizer">
+    <meta name="author" content="Image Compressor">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Image Compressor - Optimize Your Images Online</title>
-
-    <meta name="description" content="Compress and optimize your images online with a fast, responsive, and modern image compressor tool." />
-    <meta name="keywords" content="image compressor, compress image, optimize image, reduce image size" />
-    <meta name="author" content="Image Compressor" />
+    <title>Image Compressor Tool</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body class="bg-light text-dark d-flex flex-column min-vh-100">
+<body class="bg-light text-dark">
 
-    <!-- Header -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
-        <div class="container py-3 container">
-            <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-file-image text-primary fs-3"></i>
-                <h1 class="h4 mb-0 fw-bold">Image Compressor</h1>
-            </div>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fa-solid fa-image me-2"></i>Image Compressor
+            </a>
 
-            <button class="btn btn-primary">
-                <i class="fa-solid fa-cloud-arrow-up me-2"></i>
-                Upload
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
             </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="py-5">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-3">
-                Compress Images Without Losing Quality
-            </h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="fw-bold mb-3">
+                        Compress Images Quickly & Easily
+                    </h1>
 
-            <p class="lead text-secondary mx-auto" style="max-width: 750px;">
-                Reduce image file sizes quickly and efficiently using our modern online image compressor.
-                Perfect for websites, blogs, social media, and faster uploads.
-            </p>
+                    <p class="text-secondary mb-4">
+                        Reduce image file size online without losing quality.
+                        Upload JPG, PNG, or WEBP images and optimize them instantly
+                        for websites, blogs, and social media.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Main Tool -->
-    <main class="container mb-5">
+    <!-- ADS TOP -->
+    <section class="pb-4">
+        <div class="container">
+            <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
+                <small class="text-muted d-block mb-2">Advertisement</small>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
+                <div class="py-5">
+                    <h5 class="text-secondary">
+                        728 x 90 Ad Space
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Upload Card -->
-                <div class="card border-0 shadow-sm rounded-4">
-                    <div class="card-body p-5 text-center">
+    <!-- COMPRESSOR -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
 
-                        <div class="mb-4">
-                            <i class="fa-solid fa-images text-primary fa-4x"></i>
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="text-center mb-4">
+                                <div class="display-5 text-primary mb-3">
+                                    <i class="fa-solid fa-file-image"></i>
+                                </div>
+
+                                <h3 class="fw-bold">
+                                    Upload Your Image
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Select an image and choose compression quality.
+                                </p>
+                            </div>
+
+                            <div class="mb-4">
+                                <input 
+                                    type="file" 
+                                    class="form-control form-control-lg" 
+                                    id="imageInput"
+                                    accept="image/*">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Compression Quality
+                                </label>
+
+                                <input 
+                                    type="range" 
+                                    class="form-range" 
+                                    min="10" 
+                                    max="100" 
+                                    value="70"
+                                    id="qualityRange">
+
+                                <div class="d-flex justify-content-between">
+                                    <small>Low Size</small>
+                                    <small id="qualityValue">70%</small>
+                                    <small>High Quality</small>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg rounded-3" id="compressBtn">
+                                    <i class="fa-solid fa-compress me-2"></i>
+                                    Compress Image
+                                </button>
+                            </div>
+
                         </div>
+                    </div>
 
-                        <h3 class="fw-semibold mb-3">
-                            Upload Your Image
-                        </h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <p class="text-secondary mb-4">
-                            Select an image and compress it instantly.
+    <!-- RESULT -->
+    <section class="pb-5 d-none" id="resultSection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="fw-bold mb-4 text-center">
+                                Compression Result
+                            </h3>
+
+                            <div class="text-center mb-4">
+                                <img 
+                                    id="previewImage" 
+                                    class="img-fluid rounded-4 border"
+                                    alt="Compressed Preview">
+                            </div>
+
+                            <div class="row text-center mb-4">
+                                <div class="col-6">
+                                    <div class="bg-light rounded-4 p-3">
+                                        <small class="text-muted d-block">
+                                            Original Size
+                                        </small>
+
+                                        <strong id="originalSize">0 KB</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="bg-light rounded-4 p-3">
+                                        <small class="text-muted d-block">
+                                            Compressed Size
+                                        </small>
+
+                                        <strong id="compressedSize">0 KB</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <a 
+                                    id="downloadBtn"
+                                    class="btn btn-success btn-lg rounded-3"
+                                    download="compressed-image.jpg">
+
+                                    <i class="fa-solid fa-download me-2"></i>
+                                    Download Image
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                        <h2 class="fw-bold mb-3">
+                            About This Tool
+                        </h2>
+
+                        <p class="text-secondary mb-3">
+                            This free online image compressor helps reduce image size
+                            while preserving visual quality. Perfect for bloggers,
+                            developers, photographers, and anyone who wants faster-loading
+                            images for websites and social media.
                         </p>
 
-                        <input 
-                            type="file" 
-                            id="imageInput"
-                            class="form-control mb-4"
-                            accept="image/*"
-                        >
-
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold">
-                                Compression Level
-                            </label>
-
-                            <input 
-                                type="range" 
-                                class="form-range"
-                                min="10"
-                                max="100"
-                                value="70"
-                                id="compressionRange"
-                            >
-
-                            <div class="text-secondary">
-                                <span id="compressionValue">70</span>% Quality
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary btn-lg px-5" id="compressBtn">
-                            <i class="fa-solid fa-compress me-2"></i>
-                            Compress Image
-                        </button>
-
+                        <p class="text-secondary mb-0">
+                            The tool works directly in your browser, which means your
+                            images stay private and secure. No uploads to external servers.
+                        </p>
                     </div>
+
                 </div>
-
-                <!-- Result -->
-                <div class="card border-0 shadow-sm rounded-4 mt-4 d-none" id="resultCard">
-                    <div class="card-body p-4 text-center">
-
-                        <h4 class="fw-bold mb-3">
-                            Compression Complete
-                        </h4>
-
-                        <img 
-                            id="previewImage"
-                            class="img-fluid rounded mb-4"
-                            alt="Compressed Preview"
-                        >
-
-                        <a 
-                            href="#"
-                            class="btn btn-success"
-                            id="downloadBtn"
-                            download="compressed-image.jpg"
-                        >
-                            <i class="fa-solid fa-download me-2"></i>
-                            Download Image
-                        </a>
-
-                    </div>
-                </div>
-
             </div>
         </div>
+    </section>
 
-        <!-- Ad Space -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-8">
+    <!-- ADS BOTTOM -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
+                <small class="text-muted d-block mb-2">Sponsored Space</small>
 
-                <div class="card border-0 shadow-sm rounded-4">
-                    <div class="card-body text-center py-5">
-
-                        <div class="text-secondary mb-2">
-                            Advertisement Space
-                        </div>
-
-                        <div class="fw-semibold">
-                            Your Ads Banner Here
-                        </div>
-
-                    </div>
+                <div class="py-5">
+                    <h5 class="text-secondary">
+                        Responsive Ad Placement
+                    </h5>
                 </div>
-
             </div>
         </div>
+    </section>
 
-        <!-- Description -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-8">
-
-                <div class="bg-white rounded-4 shadow-sm p-4">
-                    <h3 class="fw-bold mb-3">
-                        Why Use Our Image Compressor?
-                    </h3>
-
-                    <p class="text-secondary mb-3">
-                        Our online image compressor helps reduce image sizes while maintaining excellent quality.
-                        This improves website speed, SEO performance, and user experience.
-                    </p>
-
-                    <div class="row g-4 mt-2">
-
-                        <div class="col-md-4">
-                            <div class="border rounded-4 p-4 h-100 bg-light">
-                                <i class="fa-solid fa-bolt text-primary fs-2 mb-3"></i>
-                                <h5>Fast</h5>
-                                <p class="text-secondary mb-0">
-                                    Compress images instantly in your browser.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="border rounded-4 p-4 h-100 bg-light">
-                                <i class="fa-solid fa-shield-halved text-primary fs-2 mb-3"></i>
-                                <h5>Secure</h5>
-                                <p class="text-secondary mb-0">
-                                    Your files stay private and secure.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="border rounded-4 p-4 h-100 bg-light">
-                                <i class="fa-solid fa-mobile-screen text-primary fs-2 mb-3"></i>
-                                <h5>Responsive</h5>
-                                <p class="text-secondary mb-0">
-                                    Works perfectly on desktop and mobile devices.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-top mt-auto">
-        <div class="container py-4 text-center">
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4">
+        <div class="container text-center">
             <p class="mb-1 fw-semibold">
-                Image Compressor
+                Image Compressor Tool
             </p>
 
-            <p class="text-secondary small mb-0">
+            <small class="text-muted">
                 © 2026 All Rights Reserved.
-            </p>
+            </small>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script -->
+    <!-- SCRIPT -->
     <script>
-        const compressionRange = document.getElementById('compressionRange');
-        const compressionValue = document.getElementById('compressionValue');
         const imageInput = document.getElementById('imageInput');
+        const qualityRange = document.getElementById('qualityRange');
+        const qualityValue = document.getElementById('qualityValue');
         const compressBtn = document.getElementById('compressBtn');
-        const resultCard = document.getElementById('resultCard');
+
+        const resultSection = document.getElementById('resultSection');
         const previewImage = document.getElementById('previewImage');
+        const originalSize = document.getElementById('originalSize');
+        const compressedSize = document.getElementById('compressedSize');
         const downloadBtn = document.getElementById('downloadBtn');
 
-        compressionRange.addEventListener('input', () => {
-            compressionValue.textContent = compressionRange.value;
+        qualityRange.addEventListener('input', () => {
+            qualityValue.textContent = qualityRange.value + '%';
         });
 
         compressBtn.addEventListener('click', () => {
-
             const file = imageInput.files[0];
 
             if (!file) {
-                alert('Please upload an image first.');
+                alert('Please select an image first.');
                 return;
             }
+
+            const quality = qualityRange.value / 100;
 
             const reader = new FileReader();
 
             reader.onload = function(event) {
-
                 const img = new Image();
 
                 img.onload = function() {
-
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
 
@@ -263,14 +304,24 @@
 
                     ctx.drawImage(img, 0, 0);
 
-                    const quality = compressionRange.value / 100;
+                    canvas.toBlob(function(blob) {
 
-                    const compressedData = canvas.toDataURL('image/jpeg', quality);
+                        const compressedUrl = URL.createObjectURL(blob);
 
-                    previewImage.src = compressedData;
-                    downloadBtn.href = compressedData;
+                        previewImage.src = compressedUrl;
 
-                    resultCard.classList.remove('d-none');
+                        originalSize.textContent =
+                            (file.size / 1024).toFixed(2) + ' KB';
+
+                        compressedSize.textContent =
+                            (blob.size / 1024).toFixed(2) + ' KB';
+
+                        downloadBtn.href = compressedUrl;
+
+                        resultSection.classList.remove('d-none');
+
+                    }, 'image/jpeg', quality);
+
                 };
 
                 img.src = event.target.result;
@@ -279,6 +330,9 @@
             reader.readAsDataURL(file);
         });
     </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

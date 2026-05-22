@@ -1,303 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Metadata Cleaner - Remove EXIF Data Online</title>
 
-  <title>Image Metadata Cleaner</title>
+    <meta name="description" content="Remove image metadata and EXIF information online for free. Clean JPG, PNG, and WEBP image metadata instantly with a modern and responsive tool.">
+    <meta name="keywords" content="image metadata cleaner, remove exif, exif remover, clean image metadata, privacy image tool">
+    <meta name="author" content="Image Metadata Cleaner">
+    <meta name="robots" content="index, follow">
 
-  <meta name="description" content="Free online Image Metadata Cleaner tool to remove EXIF, GPS, camera, and hidden metadata from your images instantly." />
-  <meta name="keywords" content="image metadata cleaner, remove exif data, image privacy tool, metadata remover, photo cleaner" />
-  <meta name="author" content="Image Metadata Cleaner" />
-  <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Image Metadata Cleaner">
+    <meta property="og:description" content="Remove image metadata and EXIF information instantly online.">
+    <meta property="og:type" content="website">
 
-  <meta property="og:title" content="Image Metadata Cleaner" />
-  <meta property="og:description" content="Remove hidden metadata from your images online for better privacy and security." />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body class="bg-light text-dark">
 
-  <!-- HEADER -->
-  <header class="border-bottom bg-white">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
-          <i class="fa-solid fa-shield-halved me-2 text-primary"></i>
-          Image Metadata Cleaner
-        </a>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fa-solid fa-image me-2"></i>
+                Image Metadata Cleaner
+            </a>
 
-        <nav class="d-none d-md-flex gap-4">
-          <a href="#" class="text-decoration-none text-secondary">Home</a>
-          <a href="#" class="text-decoration-none text-secondary">Features</a>
-          <a href="#" class="text-decoration-none text-secondary">Privacy</a>
-          <a href="#" class="text-decoration-none text-secondary">Contact</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <!-- HERO -->
-  <section class="py-5">
-    <div class="container">
-
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-
-          <div class="mb-4">
-            <span class="badge bg-primary-subtle text-primary px-3 py-2">
-              Privacy Protection Tool
-            </span>
-          </div>
-
-          <h1 class="display-5 fw-bold mb-3">
-            Remove Hidden Metadata From Images
-          </h1>
-
-          <p class="lead text-secondary mb-5">
-            Clean EXIF, GPS location, camera information, and hidden metadata
-            from your photos instantly before sharing them online.
-          </p>
-
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- TOOL -->
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+    <!-- HERO -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
 
-          <div class="card border-0 shadow-sm rounded-4">
-            <div class="card-body p-4 p-md-5">
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 mb-3">
+                        Secure • Fast • Free
+                    </span>
 
-              <div class="text-center mb-4">
-                <i class="fa-solid fa-image fa-3x text-primary mb-3"></i>
-                <h2 class="h4 fw-semibold">
-                  Upload Your Image
-                </h2>
-              </div>
+                    <h1 class="display-5 fw-bold mb-3">
+                        Remove Image Metadata Instantly
+                    </h1>
 
-              <div class="mb-4">
-                <input
-                  type="file"
-                  id="imageInput"
-                  accept="image/*"
-                  class="form-control form-control-lg"
-                />
-              </div>
+                    <p class="lead text-secondary mb-4">
+                        Protect your privacy by removing hidden EXIF and metadata information from your images.
+                        Upload your JPG, PNG, or WEBP files and download clean images in seconds.
+                    </p>
 
-              <div class="d-grid mb-4">
-                <button
-                  id="cleanBtn"
-                  class="btn btn-primary btn-lg rounded-3"
-                >
-                  <i class="fa-solid fa-broom me-2"></i>
-                  Clean Metadata
-                </button>
-              </div>
-
-              <div
-                id="previewContainer"
-                class="text-center d-none"
-              >
-                <img
-                  id="previewImage"
-                  class="img-fluid rounded-4 border mb-4"
-                  alt="Preview"
-                />
-
-                <div class="d-grid">
-                  <a
-                    id="downloadBtn"
-                    class="btn btn-success btn-lg rounded-3"
-                    download="clean-image.png"
-                  >
-                    <i class="fa-solid fa-download me-2"></i>
-                    Download Clean Image
-                  </a>
                 </div>
-              </div>
+            </div>
+        </div>
+    </section>
 
-              <div
-                id="alertBox"
-                class="alert alert-danger mt-4 d-none"
-                role="alert"
-              ></div>
+    <!-- TOOL -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-shield-halved fa-3x text-primary mb-3"></i>
+                                <h3 class="fw-bold">Upload Your Image</h3>
+                                <p class="text-secondary mb-0">
+                                    Your image is processed directly in your browser.
+                                </p>
+                            </div>
+
+                            <div class="mb-4">
+                                <input class="form-control form-control-lg" type="file" id="imageInput" accept="image/*">
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary btn-lg" id="cleanBtn">
+                                    <i class="fa-solid fa-broom me-2"></i>
+                                    Clean Metadata
+                                </button>
+                            </div>
+
+                            <div class="text-center mt-4 d-none" id="downloadSection">
+                                <a id="downloadLink" class="btn btn-success btn-lg" download="clean-image.png">
+                                    <i class="fa-solid fa-download me-2"></i>
+                                    Download Clean Image
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADS -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="card border-0 bg-white shadow-sm rounded-4">
+                <div class="card-body text-center py-5">
+
+                    <span class="badge bg-warning text-dark mb-3">
+                        Advertisement
+                    </span>
+
+                    <h5 class="fw-semibold">728 x 90 Ad Space</h5>
+
+                    <p class="text-secondary mb-0">
+                        Place your Google AdSense or banner advertisement here.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="pb-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Use This Tool?</h2>
+                <p class="text-secondary">
+                    Fast, lightweight, and privacy-focused metadata cleaner.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-lock fa-2x text-primary mb-3"></i>
+                            <h5 class="fw-bold">Privacy First</h5>
+                            <p class="text-secondary mb-0">
+                                Remove hidden GPS locations, camera information, and personal metadata.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-bolt fa-2x text-primary mb-3"></i>
+                            <h5 class="fw-bold">Fast Processing</h5>
+                            <p class="text-secondary mb-0">
+                                Clean image metadata instantly without uploading files to external servers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-mobile-screen fa-2x text-primary mb-3"></i>
+                            <h5 class="fw-bold">Responsive Design</h5>
+                            <p class="text-secondary mb-0">
+                                Works perfectly on desktop, tablet, and mobile devices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-          </div>
 
         </div>
-      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- DESCRIPTION -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-lg-5">
 
-  <!-- DESCRIPTION -->
-  <section class="pb-5">
-    <div class="container">
+                    <h2 class="fw-bold mb-4">
+                        About Image Metadata Cleaner
+                    </h2>
 
-      <div class="row g-4">
+                    <p class="text-secondary">
+                        Image metadata often contains hidden information such as GPS location,
+                        camera model, device details, timestamps, and editing history.
+                        Sharing photos online without removing metadata may expose private data.
+                    </p>
 
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm h-100 rounded-4">
-            <div class="card-body p-4 text-center">
-              <i class="fa-solid fa-location-dot fa-2x text-primary mb-3"></i>
-              <h3 class="h5 fw-bold">Remove GPS Data</h3>
-              <p class="text-secondary mb-0">
-                Delete location information embedded inside photos.
-              </p>
+                    <p class="text-secondary mb-0">
+                        This free online Image Metadata Cleaner helps you remove EXIF and metadata
+                        directly in your browser. No registration, no uploads, and no tracking.
+                        Your files remain private while giving you a cleaner and safer image ready
+                        for social media, websites, or personal sharing.
+                    </p>
+
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm h-100 rounded-4">
-            <div class="card-body p-4 text-center">
-              <i class="fa-solid fa-camera fa-2x text-primary mb-3"></i>
-              <h3 class="h5 fw-bold">Hide Camera Info</h3>
-              <p class="text-secondary mb-0">
-                Remove camera model and device information for privacy.
-              </p>
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="fw-semibold">
+                        © 2026 Image Metadata Cleaner
+                    </span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Terms</a>
+                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
+                </div>
+
             </div>
-          </div>
         </div>
+    </footer>
 
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm h-100 rounded-4">
-            <div class="card-body p-4 text-center">
-              <i class="fa-solid fa-lock fa-2x text-primary mb-3"></i>
-              <h3 class="h5 fw-bold">Protect Privacy</h3>
-              <p class="text-secondary mb-0">
-                Share clean images safely across websites and social media.
-              </p>
-            </div>
-          </div>
-        </div>
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-      </div>
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const cleanBtn = document.getElementById('cleanBtn');
+        const downloadSection = document.getElementById('downloadSection');
+        const downloadLink = document.getElementById('downloadLink');
 
-    </div>
-  </section>
+        cleanBtn.addEventListener('click', () => {
+            const file = imageInput.files[0];
 
-  <!-- ADVERTISEMENT -->
-  <section class="pb-5">
-    <div class="container">
-      <div class="card border-0 bg-white shadow-sm rounded-4">
-        <div class="card-body text-center p-5">
+            if (!file) {
+                alert('Please select an image first.');
+                return;
+            }
 
-          <p class="text-uppercase small text-secondary mb-2">
-            Advertisement
-          </p>
+            const reader = new FileReader();
 
-          <div class="border rounded-4 py-5 bg-light">
-            <h4 class="fw-bold mb-2">Ad Space</h4>
-            <p class="text-secondary mb-0">
-              Google AdSense or Banner Advertisement Area
-            </p>
-          </div>
+            reader.onload = function(event) {
+                const img = new Image();
 
-        </div>
-      </div>
-    </div>
-  </section>
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-top py-4">
-    <div class="container">
+                    canvas.width = img.width;
+                    canvas.height = img.height;
 
-      <div class="row align-items-center">
+                    ctx.drawImage(img, 0, 0);
 
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          <div class="fw-bold">
-            <i class="fa-solid fa-shield-halved me-2 text-primary"></i>
-            Image Metadata Cleaner
-          </div>
-        </div>
+                    canvas.toBlob(function(blob) {
+                        const cleanUrl = URL.createObjectURL(blob);
 
-        <div class="col-md-6 text-center text-md-end">
-          <small class="text-secondary">
-            © 2026 Image Metadata Cleaner. All rights reserved.
-          </small>
-        </div>
+                        downloadLink.href = cleanUrl;
+                        downloadSection.classList.remove('d-none');
+                    }, 'image/png');
+                };
 
-      </div>
+                img.src = event.target.result;
+            };
 
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    const imageInput = document.getElementById("imageInput");
-    const cleanBtn = document.getElementById("cleanBtn");
-    const previewContainer = document.getElementById("previewContainer");
-    const previewImage = document.getElementById("previewImage");
-    const downloadBtn = document.getElementById("downloadBtn");
-    const alertBox = document.getElementById("alertBox");
-
-    let selectedFile = null;
-
-    imageInput.addEventListener("change", function (event) {
-      selectedFile = event.target.files[0];
-
-      alertBox.classList.add("d-none");
-
-      if (selectedFile) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-          previewImage.src = e.target.result;
-          previewContainer.classList.remove("d-none");
-        };
-
-        reader.readAsDataURL(selectedFile);
-      }
-    });
-
-    cleanBtn.addEventListener("click", function () {
-
-      if (!selectedFile) {
-        alertBox.textContent = "Please upload an image first.";
-        alertBox.classList.remove("d-none");
-        return;
-      }
-
-      const img = new Image();
-
-      img.onload = function () {
-
-        const canvas = document.createElement("canvas");
-        const ctx = canvas.getContext("2d");
-
-        canvas.width = img.width;
-        canvas.height = img.height;
-
-        ctx.drawImage(img, 0, 0);
-
-        const cleanedImage = canvas.toDataURL("image/png");
-
-        previewImage.src = cleanedImage;
-        downloadBtn.href = cleanedImage;
-
-      };
-
-      img.src = URL.createObjectURL(selectedFile);
-
-    });
-  </script>
+            reader.readAsDataURL(file);
+        });
+    </script>
 
 </body>
 </html>

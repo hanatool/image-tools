@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free AI Image Upscaler Tool to enhance image quality, increase resolution, and sharpen photos online.">
+  <meta name="keywords" content="image upscaler, AI upscaler, photo enhancer, HD image, image quality">
+  <meta name="author" content="Image Upscaler">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>AI Image Upscaler</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-light text-dark">
+
+  <!-- HEADER -->
+  <header class="border-bottom bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-image text-primary me-2"></i>
+        ImageUpscaler
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+
+          <span class="badge bg-primary-subtle text-primary px-3 py-2 mb-3">
+            AI Powered Image Enhancement
+          </span>
+
+          <h1 class="display-5 fw-bold mb-3">
+            Upscale Your Images Instantly
+          </h1>
+
+          <p class="lead text-secondary mb-4">
+            Enhance low-resolution photos with AI technology. Improve quality,
+            sharpen details, and create high-definition images in seconds.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADS TOP -->
+  <section class="pb-4">
+    <div class="container">
+      <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
+        <small class="text-muted d-block mb-2">Advertisement</small>
+
+        <div class="ratio ratio-21x9 bg-light rounded-3 d-flex align-items-center justify-content-center">
+          <div>
+            <i class="fa-solid fa-rectangle-ad fa-2x text-secondary mb-2"></i>
+            <p class="mb-0 text-secondary">728x90 Ad Space</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPLOADER -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4 p-lg-5">
+
+              <div class="text-center mb-4">
+                <i class="fa-solid fa-cloud-arrow-up fa-3x text-primary mb-3"></i>
+                <h2 class="fw-bold">Upload Your Image</h2>
+                <p class="text-secondary">
+                  JPG, PNG, WEBP supported. Max size 10MB.
+                </p>
+              </div>
+
+              <form id="uploadForm">
+
+                <div class="mb-4">
+                  <input
+                    type="file"
+                    class="form-control form-control-lg"
+                    id="imageInput"
+                    accept="image/*"
+                  >
+                </div>
+
+                <div class="row g-3 mb-4">
+
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">
+                      Upscale Factor
+                    </label>
+
+                    <select class="form-select form-select-lg" id="scaleSelect">
+                      <option value="2x">2x Upscale</option>
+                      <option value="4x">4x Upscale</option>
+                      <option value="8x">8x Upscale</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">
+                      Enhancement Type
+                    </label>
+
+                    <select class="form-select form-select-lg">
+                      <option>Standard</option>
+                      <option>Sharp</option>
+                      <option>Portrait</option>
+                      <option>Anime</option>
+                    </select>
+                  </div>
+
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg rounded-3">
+                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                    Upscale Image
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="pb-5 d-none" id="resultSection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4">
+
+              <div class="text-center mb-4">
+                <h3 class="fw-bold">Preview Result</h3>
+              </div>
+
+              <div class="text-center">
+                <img
+                  id="previewImage"
+                  class="img-fluid rounded-4 border"
+                  alt="Preview"
+                >
+              </div>
+
+              <div class="d-grid mt-4">
+                <a href="#" class="btn btn-success btn-lg rounded-3">
+                  <i class="fa-solid fa-download me-2"></i>
+                  Download HD Image
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+            <i class="fa-solid fa-bolt text-primary fa-2x mb-3"></i>
+            <h4 class="fw-bold">Fast Processing</h4>
+            <p class="text-secondary mb-0">
+              Upload your image and get enhanced results within seconds using AI-powered technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+            <i class="fa-solid fa-shield-halved text-primary fa-2x mb-3"></i>
+            <h4 class="fw-bold">Secure Uploads</h4>
+            <p class="text-secondary mb-0">
+              Your files are protected and automatically removed after processing.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="bg-white border rounded-4 p-4 h-100 shadow-sm">
+            <i class="fa-solid fa-image text-primary fa-2x mb-3"></i>
+            <h4 class="fw-bold">High Quality</h4>
+            <p class="text-secondary mb-0">
+              Increase image resolution while preserving details, colors, and textures.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADS BOTTOM -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
+
+        <small class="text-muted d-block mb-2">
+          Sponsored Content
+        </small>
+
+        <div class="ratio ratio-16x9 bg-light rounded-3 d-flex align-items-center justify-content-center">
+          <div>
+            <i class="fa-solid fa-rectangle-ad fa-2x text-secondary mb-2"></i>
+            <p class="mb-0 text-secondary">Responsive Ad Space</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-4">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span class="fw-semibold">
+            © 2026 ImageUpscaler
+          </span>
+        </div>
+
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-decoration-none text-secondary me-3">
+            Privacy Policy
+          </a>
+
+          <a href="#" class="text-decoration-none text-secondary me-3">
+            Terms
+          </a>
+
+          <a href="#" class="text-decoration-none text-secondary">
+            Support
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const uploadForm = document.getElementById('uploadForm');
+    const imageInput = document.getElementById('imageInput');
+    const previewImage = document.getElementById('previewImage');
+    const resultSection = document.getElementById('resultSection');
+
+    uploadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const file = imageInput.files[0];
+
+      if (!file) {
+        alert('Please upload an image first.');
+        return;
+      }
+
+      const reader = new FileReader();
+
+      reader.onload = function(event) {
+        previewImage.src = event.target.result;
+        resultSection.classList.remove('d-none');
+
+        resultSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+
+</body>
+</html>

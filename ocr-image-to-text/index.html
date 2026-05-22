@@ -1,184 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
-    <meta name="description" content="Free OCR Image to Text tool. Upload images and extract text instantly with a modern responsive interface.">
-    <meta name="keywords" content="OCR, Image to Text, OCR Tool, Extract Text, Online OCR, Bootstrap OCR">
-    <meta name="author" content="OCR Image to Text">
-    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free OCR Image to Text tool to extract text from images instantly using a modern and responsive interface.">
+    <meta name="keywords" content="OCR, Image to Text, Text Extractor, OCR Tool, Bootstrap OCR">
+    <meta name="author" content="OCR Image To Text">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>OCR Image to Text</title>
+    <title>OCR Image To Text</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Tesseract.js -->
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
-<body class="bg-light" style="font-family: 'Inter', sans-serif;">
+<body class="bg-light">
 
-    <!-- Header -->
-    <header class="border-bottom bg-white sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-dark" href="#">
-                    <i class="fa-solid fa-file-lines me-2 text-primary"></i>
-                    OCR Image to Text
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tool">OCR Tool</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="py-5 bg-white border-bottom">
-        <div class="container text-center">
-            <div class="mx-auto" style="max-width: 750px;">
-                <h1 class="fw-bold display-5 mb-3">
-                    Convert Image to Text Instantly
-                </h1>
-
-                <p class="text-secondary fs-5 mb-4">
-                    Upload your image and extract text automatically using modern OCR technology.
-                    Fast, accurate, responsive, and easy to use on desktop or mobile devices.
-                </p>
-
-                <a href="#tool" class="btn btn-primary btn-lg px-4">
-                    <i class="fa-solid fa-upload me-2"></i>
-                    Start OCR
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ads -->
-    <section class="py-4">
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
         <div class="container">
-            <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
-                <span class="badge bg-warning text-dark mb-2">
-                    Advertisement
-                </span>
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fa-solid fa-file-lines me-2"></i>OCR Image To Text
+            </a>
 
-                <div class="text-secondary">
-                    Your Advertisement Banner Here
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- OCR Tool -->
-    <section class="py-5" id="tool">
+    <!-- HERO -->
+    <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-9 text-center">
 
-                    <div class="card border-0 shadow-sm rounded-4">
-                        <div class="card-body p-4 p-lg-5">
+                    <div class="bg-white border rounded-4 shadow-sm p-4 p-lg-5">
 
-                            <div class="text-center mb-4">
-                                <h2 class="fw-bold">
-                                    OCR Image to Text Tool
-                                </h2>
+                        <div class="mb-4">
+                            <span class="badge text-bg-primary px-3 py-2">
+                                Fast & Accurate OCR Tool
+                            </span>
+                        </div>
 
-                                <p class="text-secondary">
-                                    Select an image file and extract text automatically.
-                                </p>
+                        <h1 class="fw-bold mb-3">
+                            Extract Text From Images Instantly
+                        </h1>
+
+                        <p class="text-secondary mb-4">
+                            Upload an image and convert it into editable text within seconds.
+                            This OCR Image To Text tool is responsive, lightweight, modern,
+                            and designed for desktop and mobile users.
+                        </p>
+
+                        <!-- OCR FORM -->
+                        <div class="border rounded-4 p-4 bg-light">
+
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg" type="file" id="imageInput" accept="image/*">
                             </div>
 
-                            <!-- Upload -->
-                            <div class="mb-4">
-                                <label class="form-label fw-semibold">
-                                    Upload Image
-                                </label>
-
-                                <input 
-                                    type="file" 
-                                    class="form-control form-control-lg" 
-                                    id="imageInput"
-                                    accept="image/*"
-                                >
-                            </div>
-
-                            <!-- Preview -->
-                            <div class="text-center mb-4 d-none" id="previewContainer">
-                                <img 
-                                    id="previewImage" 
-                                    class="img-fluid rounded-4 border"
-                                    alt="Preview"
-                                    style="max-height: 350px;"
-                                >
-                            </div>
-
-                            <!-- Button -->
-                            <div class="d-grid mb-4">
-                                <button class="btn btn-primary btn-lg" id="extractBtn">
+                            <div class="d-grid d-md-flex justify-content-md-center gap-2">
+                                <button class="btn btn-primary btn-lg px-4" id="extractBtn">
                                     <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
                                     Extract Text
                                 </button>
-                            </div>
 
-                            <!-- Loading -->
-                            <div class="d-none mb-4" id="loadingBox">
-                                <div class="alert alert-info">
-                                    <div class="d-flex align-items-center">
-                                        <div class="spinner-border spinner-border-sm me-3"></div>
-                                        <div id="loadingText">
-                                            Processing OCR...
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Result -->
-                            <div>
-                                <label class="form-label fw-semibold">
-                                    Extracted Text
-                                </label>
-
-                                <textarea 
-                                    class="form-control" 
-                                    rows="12" 
-                                    id="resultText"
-                                    placeholder="OCR result will appear here..."
-                                ></textarea>
-                            </div>
-
-                            <!-- Copy -->
-                            <div class="d-grid mt-3">
-                                <button class="btn btn-outline-dark" id="copyBtn">
-                                    <i class="fa-regular fa-copy me-2"></i>
+                                <button class="btn btn-outline-secondary btn-lg px-4" id="copyBtn">
+                                    <i class="fa-solid fa-copy me-2"></i>
                                     Copy Text
                                 </button>
                             </div>
 
                         </div>
+
                     </div>
 
                 </div>
@@ -186,152 +100,181 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section class="py-5 bg-white border-top" id="about">
+    <!-- ADS AREA -->
+    <section class="pb-4">
+        <div class="container">
+            <div class="bg-white border rounded-4 shadow-sm p-4 text-center">
+
+                <div class="small text-uppercase text-secondary mb-2">
+                    Advertisement
+                </div>
+
+                <div class="py-5">
+                    <h5 class="fw-semibold text-secondary">
+                        Your Ad Banner Here
+                    </h5>
+
+                    <p class="text-muted mb-0">
+                        Responsive advertising space for Google AdSense or banner ads.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="pb-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+                <div class="col-lg-10">
 
-                    <h3 class="fw-bold mb-3">
-                        About This OCR Tool
-                    </h3>
+                    <div class="bg-white border rounded-4 shadow-sm p-4">
 
-                    <p class="text-secondary">
-                        This online OCR Image to Text tool helps users extract text from screenshots,
-                        scanned documents, notes, receipts, books, and images using advanced OCR technology.
-                        The interface is fully responsive, lightweight, and optimized for both desktop and mobile devices.
-                    </p>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-file-lines text-primary me-2"></i>
+                            <h4 class="mb-0 fw-bold">OCR Result</h4>
+                        </div>
+
+                        <textarea 
+                            class="form-control" 
+                            rows="12" 
+                            id="resultText"
+                            placeholder="Extracted text will appear here..."></textarea>
+
+                    </div>
 
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FEATURES -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-bolt text-primary fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold">Fast Processing</h5>
+                        <p class="text-secondary mb-0">
+                            Quickly recognize text from screenshots, scanned documents, and photos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-mobile-screen-button text-primary fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold">Mobile Friendly</h5>
+                        <p class="text-secondary mb-0">
+                            Fully responsive interface optimized for smartphones, tablets, and desktops.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-lock text-primary fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold">Secure & Simple</h5>
+                        <p class="text-secondary mb-0">
+                            Minimalist modern design with easy-to-use OCR functionality.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="bg-white border-top py-4">
         <div class="container">
+
             <div class="row align-items-center">
 
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
                     <div class="fw-semibold">
-                        OCR Image to Text
+                        OCR Image To Text
                     </div>
 
-                    <div class="text-secondary small">
-                        Fast and modern OCR converter.
-                    </div>
+                    <small class="text-secondary">
+                        Free online OCR tool built with Bootstrap 5.
+                    </small>
                 </div>
 
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-decoration-none text-secondary me-3">
-                        Privacy
-                    </a>
-
-                    <a href="#" class="text-decoration-none text-secondary me-3">
-                        Terms
-                    </a>
-
-                    <a href="#" class="text-decoration-none text-secondary">
-                        Contact
-                    </a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Privacy</a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Terms</a>
+                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
                 </div>
 
             </div>
+
         </div>
     </footer>
+
+    <!-- TESSERACT OCR -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- OCR Script -->
+    <!-- OCR SCRIPT -->
     <script>
         const imageInput = document.getElementById('imageInput');
-        const previewImage = document.getElementById('previewImage');
-        const previewContainer = document.getElementById('previewContainer');
         const extractBtn = document.getElementById('extractBtn');
         const resultText = document.getElementById('resultText');
-        const loadingBox = document.getElementById('loadingBox');
-        const loadingText = document.getElementById('loadingText');
         const copyBtn = document.getElementById('copyBtn');
 
-        let selectedImage = null;
+        extractBtn.addEventListener('click', async () => {
 
-        imageInput.addEventListener('change', function(event) {
-            const file = event.target.files[0];
+            const file = imageInput.files[0];
 
-            if (!file) return;
-
-            selectedImage = file;
-
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                previewImage.src = e.target.result;
-                previewContainer.classList.remove('d-none');
-            };
-
-            reader.readAsDataURL(file);
-        });
-
-        extractBtn.addEventListener('click', async function() {
-
-            if (!selectedImage) {
+            if (!file) {
                 alert('Please upload an image first.');
                 return;
             }
 
-            loadingBox.classList.remove('d-none');
-            resultText.value = '';
+            resultText.value = 'Processing OCR... Please wait.';
 
             try {
 
-                const { data: { text } } = await Tesseract.recognize(
-                    selectedImage,
-                    'eng',
-                    {
-                        logger: m => {
-                            if (m.status) {
-                                loadingText.innerText = m.status + '...';
-                            }
-                        }
-                    }
+                const {
+                    data: { text }
+                } = await Tesseract.recognize(
+                    file,
+                    'eng'
                 );
 
                 resultText.value = text;
 
             } catch (error) {
 
-                resultText.value = 'Error while processing OCR.';
+                resultText.value = 'Failed to extract text.';
                 console.error(error);
-
-            } finally {
-
-                loadingBox.classList.add('d-none');
 
             }
 
         });
 
-        copyBtn.addEventListener('click', function() {
+        copyBtn.addEventListener('click', () => {
 
-            if (!resultText.value.trim()) {
-                alert('No text to copy.');
+            if (!resultText.value) {
+                alert('No text available.');
                 return;
             }
 
             navigator.clipboard.writeText(resultText.value);
 
-            copyBtn.innerHTML = `
-                <i class="fa-solid fa-check me-2"></i>
-                Copied Successfully
-            `;
-
-            setTimeout(() => {
-                copyBtn.innerHTML = `
-                    <i class="fa-regular fa-copy me-2"></i>
-                    Copy Text
-                `;
-            }, 2000);
+            alert('Text copied successfully.');
 
         });
     </script>

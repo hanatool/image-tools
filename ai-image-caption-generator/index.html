@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Image Caption Generator helps you create smart captions for your images instantly with a modern responsive interface." />
+    <meta name="keywords" content="AI Caption Generator, Image Caption, AI Tool, Photo Caption Generator" />
+    <meta name="author" content="AI Image Caption Generator" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>AI Image Caption Generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-image me-2"></i>
+                    AI Image Caption Generator
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <span class="badge text-bg-light border mb-3">
+                        Smart AI Caption Tool
+                    </span>
+
+                    <h1 class="fw-bold display-5 mb-3">
+                        Generate Creative Captions for Your Images
+                    </h1>
+
+                    <p class="text-secondary fs-5">
+                        Upload your image and let AI generate engaging, creative,
+                        and social-media-ready captions instantly. Perfect for
+                        Instagram posts, blogs, products, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TOOL -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- TOOL -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="fw-semibold mb-4">
+                                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                AI Caption Generator
+                            </h3>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Upload Image
+                                </label>
+
+                                <input
+                                    type="file"
+                                    class="form-control form-control-lg"
+                                    id="imageInput"
+                                    accept="image/*"
+                                />
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <img
+                                    id="previewImage"
+                                    class="img-fluid rounded-4 border d-none"
+                                    alt="Preview"
+                                />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Caption Style
+                                </label>
+
+                                <select class="form-select form-select-lg" id="captionStyle">
+                                    <option value="creative">Creative</option>
+                                    <option value="professional">Professional</option>
+                                    <option value="funny">Funny</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="minimal">Minimal</option>
+                                </select>
+                            </div>
+
+                            <button
+                                class="btn btn-dark btn-lg w-100"
+                                id="generateBtn"
+                            >
+                                <i class="fa-solid fa-bolt me-2"></i>
+                                Generate Caption
+                            </button>
+
+                            <div class="mt-4">
+                                <label class="form-label fw-semibold">
+                                    Generated Caption
+                                </label>
+
+                                <div class="border rounded-4 bg-light p-4">
+                                    <p class="mb-0 text-secondary" id="captionResult">
+                                        Your AI-generated caption will appear here...
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADS -->
+                <div class="col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body text-center p-4">
+                            <h5 class="fw-bold mb-3">
+                                Advertisement
+                            </h5>
+
+                            <div class="border rounded-4 bg-light d-flex align-items-center justify-content-center"
+                                 style="height: 250px;">
+                                <div>
+                                    <i class="fa-solid fa-rectangle-ad fa-3x mb-3 text-secondary"></i>
+                                    <p class="text-secondary mb-0">
+                                        300 x 250 Ad Space
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">
+                                Why Use This Tool?
+                            </h5>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Fast AI caption generation
+                                </li>
+
+                                <li class="list-group-item px-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Social media ready captions
+                                </li>
+
+                                <li class="list-group-item px-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Minimal and responsive design
+                                </li>
+
+                                <li class="list-group-item px-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Easy image upload interface
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-lg-5">
+
+                    <h2 class="fw-bold mb-4">
+                        About AI Image Caption Generator
+                    </h2>
+
+                    <p class="text-secondary mb-3">
+                        AI Image Caption Generator is a modern web tool designed
+                        to help users create smart and engaging captions for images
+                        instantly. Whether you are a content creator, blogger,
+                        marketer, photographer, or social media enthusiast, this
+                        tool helps generate unique captions in seconds.
+                    </p>
+
+                    <p class="text-secondary mb-3">
+                        Simply upload an image, choose your preferred caption
+                        style, and let the AI simulate a creative caption output.
+                        The interface is lightweight, responsive, and optimized
+                        for both desktop and mobile devices.
+                    </p>
+
+                    <p class="text-secondary mb-0">
+                        This modern Bootstrap-powered layout provides a clean
+                        reading experience with minimal distractions and fast
+                        usability.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-top bg-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h5 class="fw-bold mb-1">
+                        AI Image Caption Generator
+                    </h5>
+
+                    <small class="text-secondary">
+                        Smart captions powered by modern AI inspiration.
+                    </small>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const imageInput = document.getElementById("imageInput");
+        const previewImage = document.getElementById("previewImage");
+        const generateBtn = document.getElementById("generateBtn");
+        const captionResult = document.getElementById("captionResult");
+        const captionStyle = document.getElementById("captionStyle");
+
+        imageInput.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.classList.remove("d-none");
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        generateBtn.addEventListener("click", function () {
+
+            const style = captionStyle.value;
+
+            const captions = {
+                creative: "Turning moments into timeless stories with creativity and style.",
+                professional: "A professional visual presentation crafted for modern audiences.",
+                funny: "Uploading this because my camera roll deserves attention too.",
+                travel: "Exploring beautiful places and collecting unforgettable memories.",
+                fashion: "Confidence, elegance, and modern style in a single frame.",
+                minimal: "Less noise. More meaning."
+            };
+
+            captionResult.innerText = captions[style];
+        });
+    </script>
+
+</body>
+</html>

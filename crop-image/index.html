@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free online crop image tool to crop photos easily with a modern responsive interface.">
+    <meta name="keywords" content="crop image, image cropper, photo crop tool, online image editor">
+    <meta name="author" content="Crop Image Tool">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Crop Image Tool</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-crop-simple me-2"></i>Crop Image
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">Free Online Image Cropper</h1>
+            <p class="text-secondary mx-auto" style="max-width:700px;">
+                Quickly crop your photos online with a clean and modern interface.
+                Upload an image, adjust the crop area, and download the result instantly.
+                No registration required and fully responsive for desktop and mobile devices.
+            </p>
+        </div>
+    </section>
+
+    <!-- ADS TOP -->
+    <section class="py-4">
+        <div class="container">
+            <div class="bg-white border rounded p-4 text-center">
+                <span class="text-secondary small">Advertisement Space 970x250</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TOOL -->
+    <main class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <h2 class="h4 fw-semibold mb-4">
+                                <i class="fa-solid fa-image me-2"></i>Crop Your Image
+                            </h2>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Upload Image</label>
+                                <input type="file" class="form-control" id="imageInput" accept="image/*">
+                            </div>
+
+                            <div class="text-center mb-4">
+                                <img id="previewImage"
+                                     src="https://via.placeholder.com/800x450?text=Image+Preview"
+                                     class="img-fluid rounded border"
+                                     alt="Preview">
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Crop Width</label>
+                                    <input type="number" class="form-control" id="cropWidth" value="300">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Crop Height</label>
+                                    <input type="number" class="form-control" id="cropHeight" value="300">
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button class="btn btn-dark" id="cropButton">
+                                    <i class="fa-solid fa-scissors me-2"></i>Crop Image
+                                </button>
+
+                                <button class="btn btn-outline-secondary" id="downloadButton">
+                                    <i class="fa-solid fa-download me-2"></i>Download
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ADS MIDDLE -->
+    <section class="py-4">
+        <div class="container">
+            <div class="bg-white border rounded p-4 text-center">
+                <span class="text-secondary small">Advertisement Space 728x90</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3">Simple & Fast Image Cropping</h3>
+
+                    <p class="text-secondary">
+                        This online crop image tool helps you resize and crop photos
+                        directly in your browser without installing additional software.
+                        The clean Bootstrap interface provides a smooth experience on
+                        mobile phones, tablets, and desktop devices.
+                    </p>
+
+                    <p class="text-secondary mb-0">
+                        Perfect for social media images, profile pictures, blog thumbnails,
+                        wallpapers, banners, and more. Upload your image and customize
+                        the crop dimensions instantly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-white">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <span class="fw-semibold">
+                        <i class="fa-solid fa-crop-simple me-2"></i>Crop Image Tool
+                    </span>
+                </div>
+
+                <div>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Terms</a>
+                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const previewImage = document.getElementById('previewImage');
+        const cropButton = document.getElementById('cropButton');
+        const downloadButton = document.getElementById('downloadButton');
+
+        let uploadedImage = null;
+
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    uploadedImage = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        cropButton.addEventListener('click', function() {
+            if (!uploadedImage) {
+                alert('Please upload an image first.');
+                return;
+            }
+
+            const width = parseInt(document.getElementById('cropWidth').value);
+            const height = parseInt(document.getElementById('cropHeight').value);
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            const img = new Image();
+
+            img.onload = function() {
+                canvas.width = width;
+                canvas.height = height;
+
+                ctx.drawImage(
+                    img,
+                    0,
+                    0,
+                    width,
+                    height,
+                    0,
+                    0,
+                    width,
+                    height
+                );
+
+                previewImage.src = canvas.toDataURL('image/png');
+            };
+
+            img.src = uploadedImage;
+        });
+
+        downloadButton.addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.download = 'cropped-image.png';
+            link.href = previewImage.src;
+            link.click();
+        });
+    </script>
+
+</body>
+</html>

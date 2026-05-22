@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free online PNG to JPG converter. Convert PNG images into high-quality JPG files instantly." />
+  <meta name="keywords" content="PNG to JPG, image converter, online converter, convert PNG" />
+  <meta name="author" content="PNG to JPG Tool" />
+
+  <title>PNG to JPG Converter</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+   <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="fa-solid fa-image text-primary me-2"></i>
+          PNG to JPG
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Main -->
+  <main class="flex-grow-1">
+
+    <!-- Hero -->
+    <section class="py-5">
+      <div class="container text-center">
+
+        <div class="mb-4">
+          <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">
+            Free Online Converter
+          </span>
+        </div>
+
+        <h1 class="fw-bold display-5 mb-3">
+          Convert PNG to JPG Easily
+        </h1>
+
+        <p class="text-secondary mx-auto mb-5" style="max-width: 700px;">
+          Upload your PNG image and instantly convert it into a high-quality JPG file.
+          Fast, secure, responsive, and completely free to use on all devices.
+        </p>
+
+        <!-- Converter Card -->
+        <div class="card border-0 shadow-sm rounded-4 mx-auto" style="max-width: 720px;">
+          <div class="card-body p-4 p-md-5">
+
+            <div class="mb-4">
+              <i class="fa-solid fa-file-image fa-4x text-primary"></i>
+            </div>
+
+            <input
+              type="file"
+              id="imageInput"
+              accept="image/png"
+              class="form-control form-control-lg mb-4"
+            />
+
+            <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+              <button id="convertBtn" class="btn btn-primary btn-lg px-4">
+                <i class="fa-solid fa-rotate me-2"></i>
+                Convert to JPG
+              </button>
+
+              <a id="downloadBtn"
+                 class="btn btn-success btn-lg px-4 d-none"
+                 download="converted.jpg">
+                <i class="fa-solid fa-download me-2"></i>
+                Download JPG
+              </a>
+            </div>
+
+            <div class="mt-4">
+              <img id="previewImage"
+                   class="img-fluid rounded-4 shadow-sm d-none"
+                   alt="Preview">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+      <div class="container">
+
+        <div class="row g-4">
+
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <div class="card-body p-4">
+
+                <h2 class="fw-bold mb-3">
+                  Why Use This PNG to JPG Tool?
+                </h2>
+
+                <p class="text-secondary">
+                  This online PNG to JPG converter helps you transform PNG images
+                  into optimized JPG files directly in your browser.
+                  No software installation required.
+                </p>
+
+                <div class="row g-3 mt-2">
+
+                  <div class="col-md-6">
+                    <div class="border rounded-4 p-3 h-100 bg-light">
+                      <i class="fa-solid fa-bolt text-primary mb-3 fs-4"></i>
+                      <h5 class="fw-semibold">Fast Conversion</h5>
+                      <p class="text-secondary small mb-0">
+                        Convert images instantly with modern browser technology.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="border rounded-4 p-3 h-100 bg-light">
+                      <i class="fa-solid fa-lock text-success mb-3 fs-4"></i>
+                      <h5 class="fw-semibold">Secure</h5>
+                      <p class="text-secondary small mb-0">
+                        Your images stay private and are processed locally.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="border rounded-4 p-3 h-100 bg-light">
+                      <i class="fa-solid fa-mobile-screen text-danger mb-3 fs-4"></i>
+                      <h5 class="fw-semibold">Responsive</h5>
+                      <p class="text-secondary small mb-0">
+                        Works perfectly on desktop, tablet, and mobile devices.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="border rounded-4 p-3 h-100 bg-light">
+                      <i class="fa-solid fa-cloud text-warning mb-3 fs-4"></i>
+                      <h5 class="fw-semibold">No Installation</h5>
+                      <p class="text-secondary small mb-0">
+                        Use directly in your browser without downloading apps.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Ads -->
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <div class="card-body p-4 text-center">
+
+                <h5 class="fw-bold mb-4">
+                  Advertisement
+                </h5>
+
+                <div class="border rounded-4 bg-light d-flex align-items-center justify-content-center"
+                     style="height: 300px;">
+
+                  <div>
+                    <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+                    <p class="text-secondary mb-0">
+                      Your Ad Space Here
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-4 mt-auto">
+    <div class="container text-center">
+
+      <p class="mb-2 fw-semibold">
+        PNG to JPG Converter
+      </p>
+
+      <p class="text-secondary small mb-0">
+        © 2026 All Rights Reserved. Fast and free online image conversion tool.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Converter Script -->
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const convertBtn = document.getElementById('convertBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const previewImage = document.getElementById('previewImage');
+
+    let convertedImage = null;
+
+    convertBtn.addEventListener('click', () => {
+      const file = imageInput.files[0];
+
+      if (!file) {
+        alert('Please select a PNG image first.');
+        return;
+      }
+
+      const reader = new FileReader();
+
+      reader.onload = function(event) {
+        const img = new Image();
+
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          ctx.drawImage(img, 0, 0);
+
+          convertedImage = canvas.toDataURL('image/jpeg', 0.95);
+
+          previewImage.src = convertedImage;
+          previewImage.classList.remove('d-none');
+
+          downloadBtn.href = convertedImage;
+          downloadBtn.classList.remove('d-none');
+        };
+
+        img.src = event.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+
+</body>
+</html>
