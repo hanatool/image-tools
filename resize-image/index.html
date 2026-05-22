@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free online image resizer tool to resize your images quickly and easily with a modern responsive interface.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free online image resizer tool to resize your images quickly and easily with a modern responsive interface.">
     <meta name="keywords" content="resize image, image resizer, photo resizer, online image tool">
     <meta name="author" content="Resize Image Tool">
     <meta name="theme-color" content="#ffffff">
@@ -16,7 +19,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body class="bg-light">
+
+<body class="bg-light text-dark">
 
     <!-- HEADER -->
     <header class="border-bottom bg-white sticky-top">
@@ -57,7 +61,7 @@
             </h1>
 
             <p class="text-secondary mx-auto" style="max-width: 700px;">
-                Resize your photos instantly with our fast and easy online image resizing tool. 
+                Resize your photos instantly with our fast and easy online image resizing tool.
                 Upload an image, set your custom width and height, and download the resized image in seconds.
             </p>
         </div>
@@ -70,7 +74,7 @@
                 <small class="text-muted d-block mb-2">Advertisement</small>
 
                 <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center"
-                     style="height:120px;">
+                    style="height:120px;">
                     <span class="text-secondary">
                         728 x 90 Ad Space
                     </span>
@@ -97,10 +101,7 @@
                                     Upload Image
                                 </label>
 
-                                <input 
-                                    type="file" 
-                                    class="form-control form-control-lg" 
-                                    id="imageInput"
+                                <input type="file" class="form-control form-control-lg" id="imageInput"
                                     accept="image/*">
                             </div>
 
@@ -110,10 +111,7 @@
                                         Width (px)
                                     </label>
 
-                                    <input 
-                                        type="number" 
-                                        class="form-control form-control-lg"
-                                        id="widthInput"
+                                    <input type="number" class="form-control form-control-lg" id="widthInput"
                                         placeholder="800">
                                 </div>
 
@@ -122,10 +120,7 @@
                                         Height (px)
                                     </label>
 
-                                    <input 
-                                        type="number" 
-                                        class="form-control form-control-lg"
-                                        id="heightInput"
+                                    <input type="number" class="form-control form-control-lg" id="heightInput"
                                         placeholder="600">
                                 </div>
                             </div>
@@ -144,16 +139,11 @@
                                 </h4>
 
                                 <div class="text-center">
-                                    <img 
-                                        id="previewImage"
-                                        class="img-fluid rounded-4 border shadow-sm"
-                                        alt="Preview">
+                                    <img id="previewImage" class="img-fluid rounded-4 border shadow-sm" alt="Preview">
                                 </div>
 
                                 <div class="d-grid mt-4">
-                                    <a 
-                                        id="downloadBtn"
-                                        class="btn btn-success btn-lg rounded-3"
+                                    <a id="downloadBtn" class="btn btn-success btn-lg rounded-3"
                                         download="resized-image.png">
                                         <i class="fa-solid fa-download me-2"></i>
                                         Download Image
@@ -179,9 +169,9 @@
                 </h3>
 
                 <p class="text-secondary mb-0">
-                    This responsive image resizer helps users quickly adjust image dimensions 
-                    directly in the browser without uploading files to external servers. 
-                    The tool is lightweight, mobile-friendly, and designed with a clean modern 
+                    This responsive image resizer helps users quickly adjust image dimensions
+                    directly in the browser without uploading files to external servers.
+                    The tool is lightweight, mobile-friendly, and designed with a clean modern
                     Bootstrap interface for the best user experience on desktop and mobile devices.
                 </p>
 
@@ -196,7 +186,7 @@
                 <small class="text-muted d-block mb-2">Sponsored Area</small>
 
                 <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center"
-                     style="height:250px;">
+                    style="height:250px;">
                     <span class="text-secondary">
                         Responsive Ad Banner
                     </span>
@@ -213,7 +203,10 @@
             </p>
 
             <small class="text-secondary">
-                © 2026 All Rights Reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
             </small>
         </div>
     </footer>
@@ -232,11 +225,11 @@
 
         let selectedImage = null;
 
-        imageInput.addEventListener('change', function(e) {
+        imageInput.addEventListener('change', function (e) {
             selectedImage = e.target.files[0];
         });
 
-        resizeBtn.addEventListener('click', function() {
+        resizeBtn.addEventListener('click', function () {
 
             if (!selectedImage) {
                 alert('Please upload an image first.');
@@ -253,11 +246,11 @@
 
             const reader = new FileReader();
 
-            reader.onload = function(event) {
+            reader.onload = function (event) {
 
                 const img = new Image();
 
-                img.onload = function() {
+                img.onload = function () {
 
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
@@ -283,4 +276,5 @@
     </script>
 
 </body>
+
 </html>

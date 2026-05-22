@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Image Enhancer helps improve image quality instantly with smart AI enhancement tools.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="AI Image Enhancer helps improve image quality instantly with smart AI enhancement tools.">
     <meta name="keywords" content="AI Image Enhancer, Photo Enhancer, AI Upscaler, HD Image, Improve Image Quality">
     <meta name="author" content="AI Image Enhancer">
     <meta name="theme-color" content="#ffffff">
@@ -16,14 +18,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
     <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">
-                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>AI Image Enhancer
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>AI Image Enhancer
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -68,8 +71,8 @@
                     </h1>
 
                     <p class="text-secondary mb-4">
-                        Improve photo quality instantly using advanced AI enhancement tools. 
-                        Upscale blurry images, sharpen details, reduce noise, and create 
+                        Improve photo quality instantly using advanced AI enhancement tools.
+                        Upscale blurry images, sharpen details, reduce noise, and create
                         high-quality visuals in seconds with a clean and modern experience.
                     </p>
 
@@ -101,7 +104,7 @@
 
                                 <input type="file" class="form-control mb-3" id="imageInput">
 
-                                <button class="btn btn-dark w-100" id="enhanceBtn">
+                                <button class="btn btn-primary w-100" id="enhanceBtn">
                                     <i class="fa-solid fa-bolt me-2"></i>Enhance Image
                                 </button>
                             </div>
@@ -210,17 +213,17 @@
                     </h2>
 
                     <p class="text-secondary">
-                        AI Image Enhancer is a modern online platform designed to improve 
-                        photo quality using intelligent artificial intelligence technology. 
-                        Whether you need to sharpen blurry photos, upscale low-resolution 
-                        images, or enhance colors and details, this tool helps you create 
+                        AI Image Enhancer is a modern online platform designed to improve
+                        photo quality using intelligent artificial intelligence technology.
+                        Whether you need to sharpen blurry photos, upscale low-resolution
+                        images, or enhance colors and details, this tool helps you create
                         professional-looking visuals quickly and easily.
                     </p>
 
                     <p class="text-secondary">
-                        Built with a clean and responsive interface, the platform works 
-                        perfectly on desktop, tablet, and mobile devices. Users can upload 
-                        images, process them instantly, and enjoy a fast experience with 
+                        Built with a clean and responsive interface, the platform works
+                        perfectly on desktop, tablet, and mobile devices. Users can upload
+                        images, process them instantly, and enjoy a fast experience with
                         minimal distractions and a modern light-themed design.
                     </p>
 
@@ -267,7 +270,10 @@
             <hr>
 
             <div class="text-center text-secondary small">
-                © 2026 AI Image Enhancer. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> AI Image Enhancer. All rights reserved.
             </div>
         </div>
     </footer>
@@ -282,7 +288,7 @@
 
         enhanceBtn.addEventListener('click', function () {
 
-            if(imageInput.files.length > 0){
+            if (imageInput.files.length > 0) {
                 resultBox.classList.remove('d-none');
             } else {
                 alert('Please upload an image first.');
@@ -292,4 +298,5 @@
     </script>
 
 </body>
+
 </html>

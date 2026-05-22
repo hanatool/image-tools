@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
     <title>Image Metadata Cleaner - Remove EXIF Data Online</title>
 
-    <meta name="description" content="Remove image metadata and EXIF information online for free. Clean JPG, PNG, and WEBP image metadata instantly with a modern and responsive tool.">
-    <meta name="keywords" content="image metadata cleaner, remove exif, exif remover, clean image metadata, privacy image tool">
+    <meta name="description"
+        content="Remove image metadata and EXIF information online for free. Clean JPG, PNG, and WEBP image metadata instantly with a modern and responsive tool.">
+    <meta name="keywords"
+        content="image metadata cleaner, remove exif, exif remover, clean image metadata, privacy image tool">
     <meta name="author" content="Image Metadata Cleaner">
     <meta name="robots" content="index, follow">
 
@@ -23,8 +27,8 @@
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="fa-solid fa-image me-2"></i>
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-image text-primary me-2"></i>
                 Image Metadata Cleaner
             </a>
 
@@ -93,7 +97,8 @@
                             </div>
 
                             <div class="mb-4">
-                                <input class="form-control form-control-lg" type="file" id="imageInput" accept="image/*">
+                                <input class="form-control form-control-lg" type="file" id="imageInput"
+                                    accept="image/*">
                             </div>
 
                             <div class="d-grid gap-2">
@@ -228,7 +233,10 @@
 
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <span class="fw-semibold">
-                        © 2026 Image Metadata Cleaner
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> Image Metadata Cleaner
                     </span>
                 </div>
 
@@ -261,10 +269,10 @@
 
             const reader = new FileReader();
 
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 const img = new Image();
 
-                img.onload = function() {
+                img.onload = function () {
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
 
@@ -273,7 +281,7 @@
 
                     ctx.drawImage(img, 0, 0);
 
-                    canvas.toBlob(function(blob) {
+                    canvas.toBlob(function (blob) {
                         const cleanUrl = URL.createObjectURL(blob);
 
                         downloadLink.href = cleanUrl;
@@ -289,4 +297,5 @@
     </script>
 
 </body>
+
 </html>

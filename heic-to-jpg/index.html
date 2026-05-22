@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+
     <title>HEIC to JPG Converter - Free Online Tool</title>
 
-    <meta name="description" content="Convert HEIC images to JPG online for free. Fast, responsive, modern, and easy-to-use HEIC to JPG converter.">
+    <meta name="description"
+        content="Convert HEIC images to JPG online for free. Fast, responsive, modern, and easy-to-use HEIC to JPG converter.">
     <meta name="keywords" content="heic to jpg, convert heic, jpg converter, image converter, online converter">
     <meta name="author" content="HEIC Converter">
 
@@ -24,8 +26,8 @@
     <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">
-                    <i class="fa-solid fa-image me-2"></i>
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-image text-primary me-2"></i>
                     HEIC2JPG
                 </a>
 
@@ -99,16 +101,12 @@
                             </div>
 
                             <div class="mb-4">
-                                <input 
-                                    type="file" 
-                                    id="heicInput" 
-                                    class="form-control form-control-lg"
-                                    accept=".heic,.HEIC,image/heic"
-                                >
+                                <input type="file" id="heicInput" class="form-control form-control-lg"
+                                    accept=".heic,.HEIC,image/heic">
                             </div>
 
                             <div class="d-grid mb-4">
-                                <button class="btn btn-dark btn-lg" id="convertBtn">
+                                <button class="btn btn-primary btn-lg" id="convertBtn">
                                     <i class="fa-solid fa-rotate me-2"></i>
                                     Convert to JPG
                                 </button>
@@ -204,7 +202,10 @@
             </p>
 
             <p class="text-secondary small mb-0">
-                © 2026 All Rights Reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
             </p>
         </div>
     </footer>
@@ -244,4 +245,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Modern Screenshot to PDF tool using Bootstrap. Upload screenshots and convert them into high-quality PDF files instantly.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Modern Screenshot to PDF tool using Bootstrap. Upload screenshots and convert them into high-quality PDF files instantly.">
     <meta name="keywords" content="Screenshot to PDF, PDF Converter, Image to PDF, Bootstrap PDF Tool">
     <meta name="author" content="Screenshot to PDF">
     <meta name="robots" content="index, follow">
@@ -19,7 +22,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <body class="bg-light" style="font-family: 'Inter', sans-serif;">
+<body class="bg-light" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-white border-bottom sticky-top">
@@ -91,18 +94,9 @@
                                 PNG, JPG, JPEG supported
                             </p>
 
-                            <input 
-                                type="file" 
-                                id="imageInput" 
-                                accept="image/*" 
-                                multiple 
-                                class="form-control mb-4"
-                            >
+                            <input type="file" id="imageInput" accept="image/*" multiple class="form-control mb-4">
 
-                            <button 
-                                class="btn btn-danger btn-lg px-4 rounded-pill"
-                                onclick="generatePDF()"
-                            >
+                            <button class="btn btn-danger btn-lg px-4 rounded-pill" onclick="generatePDF()">
                                 <i class="fa-solid fa-file-pdf me-2"></i>
                                 Convert to PDF
                             </button>
@@ -222,7 +216,10 @@
 
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <span class="text-secondary small">
-                        © 2026 Screenshot to PDF. All rights reserved.
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> Screenshot to PDF. All rights reserved.
                     </span>
                 </div>
 
@@ -260,7 +257,7 @@
 
         let uploadedImages = [];
 
-        imageInput.addEventListener('change', function(event) {
+        imageInput.addEventListener('change', function (event) {
             previewContainer.innerHTML = '';
             uploadedImages = [];
 
@@ -269,7 +266,7 @@
             Array.from(files).forEach(file => {
                 const reader = new FileReader();
 
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     uploadedImages.push(e.target.result);
 
                     const col = document.createElement('div');
@@ -294,15 +291,17 @@
 
         async function generatePDF() {
 
-            if(uploadedImages.length === 0) {
+            if (uploadedImages.length === 0) {
                 alert('Please upload at least one screenshot.');
                 return;
             }
 
-            const { jsPDF } = window.jspdf;
+            const {
+                jsPDF
+            } = window.jspdf;
             const pdf = new jsPDF();
 
-            for(let i = 0; i < uploadedImages.length; i++) {
+            for (let i = 0; i < uploadedImages.length; i++) {
 
                 const img = new Image();
 
@@ -316,7 +315,7 @@
                 const pageHeight = 290;
                 const imgHeight = (img.height * imgWidth) / img.width;
 
-                if(i > 0) {
+                if (i > 0) {
                     pdf.addPage();
                 }
 
@@ -335,4 +334,5 @@
     </script>
 
 </body>
+
 </html>

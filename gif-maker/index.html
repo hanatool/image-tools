@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GIF Maker - Create Animated GIF Online</title>
 
-    <meta name="description" content="Create animated GIFs online easily with our modern GIF Maker tool. Upload images, customize animation speed, and download GIFs instantly." />
-    <meta name="keywords" content="gif maker, animated gif creator, online gif tool, create gif online, gif generator" />
+    <meta name="description"
+        content="Create animated GIFs online easily with our modern GIF Maker tool. Upload images, customize animation speed, and download GIFs instantly." />
+    <meta name="keywords"
+        content="gif maker, animated gif creator, online gif tool, create gif online, gif generator" />
     <meta name="author" content="GIF Maker" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:title" content="GIF Maker - Create Animated GIF Online" />
-    <meta property="og:description" content="Modern online GIF maker with image upload, animation settings, and instant preview." />
+    <meta property="og:description"
+        content="Modern online GIF maker with image upload, animation settings, and instant preview." />
     <meta property="og:type" content="website" />
 
     <link rel="icon" href="favicon.ico" />
@@ -21,7 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
 <body class="bg-light text-dark">
@@ -31,8 +35,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
 
-                <a class="navbar-brand fw-bold" href="#">
-                    <i class="fa-solid fa-film me-2"></i>GIF Maker
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-film text-primary me-2"></i>GIF Maker
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -74,10 +78,11 @@
                 </h1>
 
                 <p class="lead text-secondary mb-4">
-                    Upload multiple images, customize animation speed, and instantly generate beautiful animated GIFs directly in your browser with a fast and minimal interface.
+                    Upload multiple images, customize animation speed, and instantly generate beautiful animated GIFs
+                    directly in your browser with a fast and minimal interface.
                 </p>
 
-                <a href="#maker" class="btn btn-dark btn-lg px-4">
+                <a href="#maker" class="btn btn-primary btn-lg px-4">
                     <i class="fa-solid fa-wand-magic-sparkles me-2"></i>Start Creating
                 </a>
 
@@ -136,13 +141,8 @@
                                     Upload Images
                                 </label>
 
-                                <input 
-                                    type="file" 
-                                    class="form-control form-control-lg" 
-                                    id="imageInput"
-                                    multiple
-                                    accept="image/*"
-                                >
+                                <input type="file" class="form-control form-control-lg" id="imageInput" multiple
+                                    accept="image/*">
                             </div>
 
                             <!-- Speed -->
@@ -151,15 +151,8 @@
                                     Animation Speed (milliseconds)
                                 </label>
 
-                                <input 
-                                    type="range" 
-                                    class="form-range"
-                                    min="100"
-                                    max="2000"
-                                    step="100"
-                                    value="500"
-                                    id="speedRange"
-                                >
+                                <input type="range" class="form-range" min="100" max="2000" step="100" value="500"
+                                    id="speedRange">
 
                                 <div class="text-secondary">
                                     Speed: <span id="speedValue">500</span> ms
@@ -169,7 +162,7 @@
                             <!-- Buttons -->
                             <div class="d-grid gap-3 d-md-flex justify-content-md-center mb-4">
 
-                                <button class="btn btn-dark btn-lg px-4" id="generateBtn">
+                                <button class="btn btn-primary btn-lg px-4" id="generateBtn">
                                     <i class="fa-solid fa-play me-2"></i>Generate Preview
                                 </button>
 
@@ -186,11 +179,9 @@
                                     GIF Preview
                                 </h5>
 
-                                <div 
-                                    id="previewArea"
+                                <div id="previewArea"
                                     class="d-flex align-items-center justify-content-center bg-white rounded-4 border"
-                                    style="min-height:300px;"
-                                >
+                                    style="min-height:300px;">
                                     <div class="text-secondary">
                                         <i class="fa-regular fa-image fs-1 mb-3"></i>
                                         <p class="mb-0">
@@ -228,7 +219,7 @@
 
                 <div class="col-md-4">
                     <div class="bg-light border rounded-4 p-4 h-100 text-center">
-                        <i class="fa-solid fa-bolt fs-2 mb-3"></i>
+                        <i class="fa-solid fa-bolt fs-2 text-danger mb-3"></i>
                         <h5 class="fw-bold">Fast Processing</h5>
                         <p class="text-secondary mb-0">
                             Generate animated previews quickly without complicated steps.
@@ -238,7 +229,7 @@
 
                 <div class="col-md-4">
                     <div class="bg-light border rounded-4 p-4 h-100 text-center">
-                        <i class="fa-solid fa-mobile-screen-button fs-2 mb-3"></i>
+                        <i class="fa-solid fa-mobile-screen-button fs-2 text-primary mb-3"></i>
                         <h5 class="fw-bold">Responsive Design</h5>
                         <p class="text-secondary mb-0">
                             Fully optimized for desktop, tablet, and mobile devices.
@@ -248,7 +239,7 @@
 
                 <div class="col-md-4">
                     <div class="bg-light border rounded-4 p-4 h-100 text-center">
-                        <i class="fa-solid fa-cloud-arrow-down fs-2 mb-3"></i>
+                        <i class="fa-solid fa-cloud-arrow-down fs-2 text-warning mb-3"></i>
                         <h5 class="fw-bold">Easy Export</h5>
                         <p class="text-secondary mb-0">
                             Simple workflow for creating and downloading animated content.
@@ -320,7 +311,10 @@
             <hr>
 
             <div class="text-center text-secondary small">
-                © 2026 GIF Maker. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> GIF Maker. All rights reserved.
             </div>
 
         </div>
@@ -395,4 +389,5 @@
     </script>
 
 </body>
+
 </html>

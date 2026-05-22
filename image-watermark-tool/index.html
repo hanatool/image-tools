@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free online image watermark tool to add text or logo watermarks to your photos easily. Responsive, modern, and simple watermark editor.">
-    <meta name="keywords" content="image watermark tool, watermark editor, add watermark online, photo watermark generator, watermark maker">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free online image watermark tool to add text or logo watermarks to your photos easily. Responsive, modern, and simple watermark editor.">
+    <meta name="keywords"
+        content="image watermark tool, watermark editor, add watermark online, photo watermark generator, watermark maker">
     <meta name="author" content="Image Watermark Tool">
     <meta name="robots" content="index, follow">
 
@@ -17,13 +21,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="fa-solid fa-image me-2"></i>Image Watermark Tool
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-image text-primary me-2"></i>Image Watermark Tool
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -110,7 +115,8 @@
                             </h3>
 
                             <div class="mb-4">
-                                <input type="file" class="form-control form-control-lg" id="imageInput" accept="image/*">
+                                <input type="file" class="form-control form-control-lg" id="imageInput"
+                                    accept="image/*">
                             </div>
 
                             <div class="border rounded-4 bg-light overflow-hidden text-center p-3">
@@ -153,7 +159,8 @@
                                     Watermark Opacity
                                 </label>
 
-                                <input type="range" class="form-range" min="0.1" max="1" step="0.1" value="0.5" id="opacity">
+                                <input type="range" class="form-range" min="0.1" max="1" step="0.1" value="0.5"
+                                    id="opacity">
                             </div>
 
                             <div class="mb-4">
@@ -256,7 +263,10 @@
             <hr>
 
             <div class="text-center text-secondary small">
-                © 2026 Image Watermark Tool. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> Image Watermark Tool. All rights reserved.
             </div>
         </div>
     </footer>
@@ -277,17 +287,17 @@
 
         let uploadedImage = null;
 
-        imageInput.addEventListener('change', function(e) {
+        imageInput.addEventListener('change', function (e) {
             const file = e.target.files[0];
 
             if (!file) return;
 
             const reader = new FileReader();
 
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 uploadedImage = new Image();
 
-                uploadedImage.onload = function() {
+                uploadedImage.onload = function () {
                     canvas.width = uploadedImage.width;
                     canvas.height = uploadedImage.height;
 
@@ -321,7 +331,7 @@
             let x = 20;
             let y = 50;
 
-            switch(position.value) {
+            switch (position.value) {
                 case 'bottom-right':
                     x = canvas.width - textWidth - 20;
                     y = canvas.height - 20;
@@ -351,7 +361,7 @@
             ctx.fillText(text, x, y);
         }
 
-        downloadBtn.addEventListener('click', function() {
+        downloadBtn.addEventListener('click', function () {
             const link = document.createElement('a');
 
             link.download = 'watermarked-image.png';
@@ -362,4 +372,5 @@
     </script>
 
 </body>
+
 </html>

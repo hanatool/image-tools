@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free SVG Converter tool to convert SVG files into PNG, JPG, WEBP, and more formats online. Fast, responsive, and modern interface.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free SVG Converter tool to convert SVG files into PNG, JPG, WEBP, and more formats online. Fast, responsive, and modern interface.">
     <meta name="keywords" content="SVG Converter, SVG to PNG, SVG to JPG, Image Converter, Online SVG Tool">
     <meta name="author" content="SVG Converter">
     <meta name="theme-color" content="#ffffff">
@@ -15,13 +18,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="fa-solid fa-file-image me-2"></i>SVG Converter
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-file-image text-primary me-2"></i>SVG Converter
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -67,7 +71,8 @@
                         </h1>
 
                         <p class="text-secondary mb-4">
-                            Upload your SVG image and convert it into PNG, JPG, WEBP, or other popular formats instantly.
+                            Upload your SVG image and convert it into PNG, JPG, WEBP, or other popular formats
+                            instantly.
                             Fast, lightweight, responsive, and optimized for desktop and mobile devices.
                         </p>
 
@@ -78,12 +83,7 @@
                                 Upload SVG File
                             </h5>
 
-                            <input
-                                type="file"
-                                class="form-control form-control-lg mb-3"
-                                id="svgInput"
-                                accept=".svg"
-                            >
+                            <input type="file" class="form-control form-control-lg mb-3" id="svgInput" accept=".svg">
 
                             <select class="form-select form-select-lg mb-3" id="formatSelect">
                                 <option value="png">Convert to PNG</option>
@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="bg-light border rounded-4 d-flex align-items-center justify-content-center"
-                     style="height: 250px;">
+                    style="height: 250px;">
 
                     <div>
                         <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
@@ -243,7 +243,10 @@
 
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <div class="fw-semibold">
-                        © 2026 SVG Converter
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> SVG Converter
                     </div>
                 </div>
 
@@ -278,7 +281,7 @@
 
         convertBtn.addEventListener('click', function () {
 
-            if(svgInput.files.length === 0){
+            if (svgInput.files.length === 0) {
                 alert('Please upload an SVG file first.');
                 return;
             }
@@ -303,4 +306,5 @@
     </script>
 
 </body>
+
 </html>

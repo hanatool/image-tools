@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
-    <meta name="description" content="Modern Image Cropper Tool with Bootstrap 5. Upload, crop, and download images easily online." />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Modern Image Cropper Tool with Bootstrap 5. Upload, crop, and download images easily online." />
     <meta name="keywords" content="image cropper, crop image online, bootstrap image editor, image tool" />
     <meta name="author" content="Image Cropper Tool" />
     <meta name="robots" content="index, follow" />
@@ -20,6 +23,7 @@
     <!-- Cropper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
@@ -103,23 +107,14 @@
                                 Upload Image
                             </label>
 
-                            <input 
-                                type="file" 
-                                class="form-control form-control-lg" 
-                                id="imageInput" 
-                                accept="image/*"
-                            >
+                            <input type="file" class="form-control form-control-lg" id="imageInput" accept="image/*">
                         </div>
 
                         <div class="row g-4">
 
                             <div class="col-lg-8">
                                 <div class="border rounded-4 overflow-hidden bg-light text-center p-3">
-                                    <img 
-                                        id="imagePreview" 
-                                        class="img-fluid d-none"
-                                        alt="Preview"
-                                    >
+                                    <img id="imagePreview" class="img-fluid d-none" alt="Preview">
                                 </div>
                             </div>
 
@@ -160,11 +155,7 @@
 
                             <div class="border rounded-4 p-4 bg-light text-center">
 
-                                <img 
-                                    id="croppedResult" 
-                                    class="img-fluid rounded d-none"
-                                    alt="Cropped Result"
-                                >
+                                <img id="croppedResult" class="img-fluid rounded d-none" alt="Cropped Result">
 
                                 <div id="emptyText" class="text-secondary">
                                     Your cropped image will appear here.
@@ -173,11 +164,7 @@
                             </div>
 
                             <div class="text-center mt-4">
-                                <a 
-                                    id="downloadBtn" 
-                                    class="btn btn-success btn-lg d-none"
-                                    download="cropped-image.png"
-                                >
+                                <a id="downloadBtn" class="btn btn-success btn-lg d-none" download="cropped-image.png">
                                     <i class="fa-solid fa-download me-2"></i>
                                     Download Image
                                 </a>
@@ -204,12 +191,15 @@
                 <p class="text-secondary">
                     This free online image cropper helps users crop photos quickly without complicated software.
                     The tool is fully responsive and built using Bootstrap 5 and Cropper.js for a smooth experience.
-                    You can upload any image, adjust the crop area, rotate images, and instantly download the final result.
+                    You can upload any image, adjust the crop area, rotate images, and instantly download the final
+                    result.
                 </p>
 
                 <p class="text-secondary mb-0">
-                    Designed with a clean white minimalist interface, this image cropper works perfectly on mobile phones,
-                    tablets, and desktop devices. Ideal for social media images, profile photos, blog thumbnails, and more.
+                    Designed with a clean white minimalist interface, this image cropper works perfectly on mobile
+                    phones,
+                    tablets, and desktop devices. Ideal for social media images, profile photos, blog thumbnails, and
+                    more.
                 </p>
             </div>
         </div>
@@ -268,13 +258,13 @@
         const downloadBtn = document.getElementById('downloadBtn');
         const emptyText = document.getElementById('emptyText');
 
-        imageInput.addEventListener('change', function(e) {
+        imageInput.addEventListener('change', function (e) {
             const files = e.target.files;
 
             if (files && files.length > 0) {
                 const reader = new FileReader();
 
-                reader.onload = function(event) {
+                reader.onload = function (event) {
 
                     imagePreview.src = event.target.result;
                     imagePreview.classList.remove('d-none');
@@ -295,7 +285,7 @@
             }
         });
 
-        cropBtn.addEventListener('click', function() {
+        cropBtn.addEventListener('click', function () {
 
             if (!cropper) return;
 
@@ -315,19 +305,19 @@
             downloadBtn.classList.remove('d-none');
         });
 
-        rotateLeft.addEventListener('click', function() {
+        rotateLeft.addEventListener('click', function () {
             if (cropper) {
                 cropper.rotate(-90);
             }
         });
 
-        rotateRight.addEventListener('click', function() {
+        rotateRight.addEventListener('click', function () {
             if (cropper) {
                 cropper.rotate(90);
             }
         });
 
-        resetBtn.addEventListener('click', function() {
+        resetBtn.addEventListener('click', function () {
             if (cropper) {
                 cropper.reset();
             }
@@ -335,4 +325,5 @@
     </script>
 
 </body>
+
 </html>

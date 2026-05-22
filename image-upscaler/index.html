@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free AI Image Upscaler Tool to enhance image quality, increase resolution, and sharpen photos online.">
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+  <meta name="description"
+    content="Free AI Image Upscaler Tool to enhance image quality, increase resolution, and sharpen photos online.">
   <meta name="keywords" content="image upscaler, AI upscaler, photo enhancer, HD image, image quality">
   <meta name="author" content="Image Upscaler">
   <meta name="theme-color" content="#ffffff">
@@ -113,12 +115,7 @@
               <form id="uploadForm">
 
                 <div class="mb-4">
-                  <input
-                    type="file"
-                    class="form-control form-control-lg"
-                    id="imageInput"
-                    accept="image/*"
-                  >
+                  <input type="file" class="form-control form-control-lg" id="imageInput" accept="image/*">
                 </div>
 
                 <div class="row g-3 mb-4">
@@ -181,11 +178,7 @@
               </div>
 
               <div class="text-center">
-                <img
-                  id="previewImage"
-                  class="img-fluid rounded-4 border"
-                  alt="Preview"
-                >
+                <img id="previewImage" class="img-fluid rounded-4 border" alt="Preview">
               </div>
 
               <div class="d-grid mt-4">
@@ -269,7 +262,10 @@
 
         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
           <span class="fw-semibold">
-            © 2026 ImageUpscaler
+            © <script type='text/javascript'>
+              var creditsyear = new Date();
+              document.write(creditsyear.getFullYear());
+            </script> ImageUpscaler
           </span>
         </div>
 
@@ -300,7 +296,7 @@
     const previewImage = document.getElementById('previewImage');
     const resultSection = document.getElementById('resultSection');
 
-    uploadForm.addEventListener('submit', function(e) {
+    uploadForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const file = imageInput.files[0];
@@ -312,7 +308,7 @@
 
       const reader = new FileReader();
 
-      reader.onload = function(event) {
+      reader.onload = function (event) {
         previewImage.src = event.target.result;
         resultSection.classList.remove('d-none');
 
@@ -326,4 +322,5 @@
   </script>
 
 </body>
+
 </html>

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Free AI Image Background Remover Tool. Remove backgrounds from images instantly with a modern and responsive interface." />
-    <meta name="keywords" content="background remover, remove image background, ai remover, transparent background, photo editor" />
+    <meta name="description"
+        content="Free AI Image Background Remover Tool. Remove backgrounds from images instantly with a modern and responsive interface." />
+    <meta name="keywords"
+        content="background remover, remove image background, ai remover, transparent background, photo editor" />
     <meta name="author" content="Image Background Remover" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -14,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
@@ -64,8 +68,8 @@
                     </h1>
 
                     <p class="lead text-secondary mb-4">
-                        Upload your image and automatically remove the background in seconds. 
-                        Fast, clean, responsive, and perfect for creators, stores, social media, 
+                        Upload your image and automatically remove the background in seconds.
+                        Fast, clean, responsive, and perfect for creators, stores, social media,
                         and professional design projects.
                     </p>
 
@@ -97,12 +101,7 @@
                                     Supports JPG, PNG, WEBP and transparent export.
                                 </p>
 
-                                <input 
-                                    type="file" 
-                                    class="form-control mb-3" 
-                                    id="imageInput"
-                                    accept="image/*"
-                                >
+                                <input type="file" class="form-control mb-3" id="imageInput" accept="image/*">
 
                                 <button class="btn btn-success w-100" id="processBtn">
                                     <i class="fa-solid fa-scissors me-2"></i>
@@ -224,10 +223,10 @@
                     </h2>
 
                     <p class="text-secondary fs-5">
-                        This modern AI-powered image background remover helps users quickly erase backgrounds 
-                        from portraits, products, logos, and graphics without complicated editing software. 
-                        Whether you are a content creator, online seller, designer, or social media manager, 
-                        this tool provides a clean and minimal experience with responsive performance across 
+                        This modern AI-powered image background remover helps users quickly erase backgrounds
+                        from portraits, products, logos, and graphics without complicated editing software.
+                        Whether you are a content creator, online seller, designer, or social media manager,
+                        this tool provides a clean and minimal experience with responsive performance across
                         desktop, tablet, and mobile devices.
                     </p>
 
@@ -246,12 +245,8 @@
                         Preview Result
                     </h3>
 
-                    <img 
-                        id="previewImage"
-                        src="https://via.placeholder.com/500x300?text=Image+Preview"
-                        class="img-fluid rounded-4 border mb-4"
-                        alt="Preview"
-                    >
+                    <img id="previewImage" src="https://via.placeholder.com/500x300?text=Image+Preview"
+                        class="img-fluid rounded-4 border mb-4" alt="Preview">
 
                     <div>
                         <button class="btn btn-dark px-4" id="downloadBtn">
@@ -299,7 +294,10 @@
             <hr>
 
             <div class="text-center text-secondary small">
-                © 2026 Image Background Remover. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> Image Background Remover. All rights reserved.
             </div>
         </div>
     </footer>
@@ -354,4 +352,5 @@
     </script>
 
 </body>
+
 </html>

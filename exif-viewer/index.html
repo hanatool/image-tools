@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
 
     <title>EXIF Viewer - Read Photo Metadata Online</title>
 
-    <meta name="description" content="Modern EXIF Viewer to inspect photo metadata including camera model, GPS, ISO, exposure, and image information online." />
-    <meta name="keywords" content="EXIF Viewer, photo metadata, image metadata, EXIF reader, camera information, GPS photo data" />
+    <meta name="description"
+        content="Modern EXIF Viewer to inspect photo metadata including camera model, GPS, ISO, exposure, and image information online." />
+    <meta name="keywords"
+        content="EXIF Viewer, photo metadata, image metadata, EXIF reader, camera information, GPS photo data" />
     <meta name="author" content="EXIF Viewer" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:title" content="EXIF Viewer - Read Photo Metadata Online" />
-    <meta property="og:description" content="Upload an image and instantly view EXIF metadata information in a clean modern interface." />
+    <meta property="og:description"
+        content="Upload an image and instantly view EXIF metadata information in a clean modern interface." />
     <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,23 +151,14 @@
                                 Upload Image
                             </label>
 
-                            <input
-                                type="file"
-                                class="form-control form-control-lg"
-                                id="imageInput"
-                                accept="image/*"
-                            >
+                            <input type="file" class="form-control form-control-lg" id="imageInput" accept="image/*">
 
                         </div>
 
                         <div id="previewContainer" class="d-none mb-4 text-center">
 
-                            <img
-                                id="previewImage"
-                                class="img-fluid rounded-4 border shadow-sm"
-                                alt="Preview"
-                                style="max-height: 450px;"
-                            >
+                            <img id="previewImage" class="img-fluid rounded-4 border shadow-sm" alt="Preview"
+                                style="max-height: 450px;">
 
                         </div>
 
@@ -321,7 +317,10 @@
             <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
 
                 <div class="text-secondary small">
-                    © 2026 EXIF Viewer. All rights reserved.
+                    © <script type='text/javascript'>
+                        var creditsyear = new Date();
+                        document.write(creditsyear.getFullYear());
+                    </script> EXIF Viewer. All rights reserved.
                 </div>
 
                 <div class="d-flex align-items-center gap-3">
@@ -422,4 +421,5 @@
     </script>
 
 </body>
+
 </html>

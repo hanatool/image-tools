@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free OCR Image to Text tool to extract text from images instantly using a modern and responsive interface.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free OCR Image to Text tool to extract text from images instantly using a modern and responsive interface.">
     <meta name="keywords" content="OCR, Image to Text, Text Extractor, OCR Tool, Bootstrap OCR">
     <meta name="author" content="OCR Image To Text">
     <meta name="theme-color" content="#ffffff">
@@ -17,13 +20,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
-<body class="bg-light">
+
+<body class="bg-light text-dark">
 
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="fa-solid fa-file-lines me-2"></i>OCR Image To Text
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-file-lines text-primary me-2"></i>OCR Image To Text
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -76,7 +80,8 @@
                         <div class="border rounded-4 p-4 bg-light">
 
                             <div class="mb-3">
-                                <input class="form-control form-control-lg" type="file" id="imageInput" accept="image/*">
+                                <input class="form-control form-control-lg" type="file" id="imageInput"
+                                    accept="image/*">
                             </div>
 
                             <div class="d-grid d-md-flex justify-content-md-center gap-2">
@@ -136,10 +141,7 @@
                             <h4 class="mb-0 fw-bold">OCR Result</h4>
                         </div>
 
-                        <textarea 
-                            class="form-control" 
-                            rows="12" 
-                            id="resultText"
+                        <textarea class="form-control" rows="12" id="resultText"
                             placeholder="Extracted text will appear here..."></textarea>
 
                     </div>
@@ -169,7 +171,7 @@
                 <div class="col-md-4">
                     <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
                         <div class="mb-3">
-                            <i class="fa-solid fa-mobile-screen-button text-primary fs-2"></i>
+                            <i class="fa-solid fa-mobile-screen-button text-danger fs-2"></i>
                         </div>
                         <h5 class="fw-bold">Mobile Friendly</h5>
                         <p class="text-secondary mb-0">
@@ -181,7 +183,7 @@
                 <div class="col-md-4">
                     <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
                         <div class="mb-3">
-                            <i class="fa-solid fa-lock text-primary fs-2"></i>
+                            <i class="fa-solid fa-lock text-success fs-2"></i>
                         </div>
                         <h5 class="fw-bold">Secure & Simple</h5>
                         <p class="text-secondary mb-0">
@@ -248,7 +250,9 @@
             try {
 
                 const {
-                    data: { text }
+                    data: {
+                        text
+                    }
                 } = await Tesseract.recognize(
                     file,
                     'eng'
@@ -280,4 +284,5 @@
     </script>
 
 </body>
+
 </html>

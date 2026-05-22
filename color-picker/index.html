@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,106 +16,111 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light text-dark">
 
-<!-- HEADER -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      <i class="fa-solid fa-palette text-primary"></i> ColorPicker
-    </a>
-  </div>
-</nav>
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-palette text-primary"></i> ColorPicker
+      </a>
+    </div>
+  </nav>
 
-<!-- AD TOP -->
-<div class="container mt-3">
-  <div class="alert alert-secondary text-center">
-    Advertisement Space
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="container mt-3">
-  <div class="p-4 bg-white rounded shadow-sm text-center">
-    <h1 class="h4 fw-bold">Modern Color Picker Tool</h1>
-    <p class="text-muted mb-0">
-      Pick any color, preview instantly, and copy HEX code with one click.
-    </p>
-  </div>
-</div>
-
-<!-- MAIN TOOL -->
-<div class="container my-4">
-  <div class="row justify-content-center">
-    <div class="col-lg-6">
-
-      <div class="card border-0 shadow-sm">
-        <div class="card-body text-center">
-
-          <h5 class="fw-bold mb-3">Choose Your Color</h5>
-
-          <input type="color" id="colorInput" class="form-control form-control-color mx-auto mb-3" value="#3498db" title="Choose color">
-
-          <div id="colorPreview" class="p-5 rounded mb-3 border" style="background:#3498db;"></div>
-
-          <div class="input-group mb-3">
-            <input type="text" id="hexValue" class="form-control text-center fw-bold" value="#3498db" readonly>
-            <button class="btn btn-primary" onclick="copyHex()">
-              <i class="fa-regular fa-copy"></i> Copy
-            </button>
-          </div>
-
-          <small class="text-muted">Click copy to save HEX color code</small>
-
-        </div>
-      </div>
-
+  <!-- AD TOP -->
+  <div class="container mt-3">
+    <div class="alert alert-secondary text-center">
+      Advertisement Space
     </div>
   </div>
-</div>
 
-<!-- AD MIDDLE -->
-<div class="container mb-4">
-  <div class="alert alert-secondary text-center">
-    Advertisement Space
+  <!-- HERO -->
+  <div class="container mt-3">
+    <div class="p-4 bg-white rounded shadow-sm text-center">
+      <h1 class="h4 fw-bold">Modern Color Picker Tool</h1>
+      <p class="text-muted mb-0">
+        Pick any color, preview instantly, and copy HEX code with one click.
+      </p>
+    </div>
   </div>
-</div>
 
-<!-- FOOTER -->
-<footer class="bg-white border-top py-3 mt-5">
-  <div class="container text-center">
-    <p class="mb-0 text-muted">
-      © 2026 ColorPicker Tool | Built with Bootstrap
-    </p>
+  <!-- MAIN TOOL -->
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body text-center">
+
+            <h5 class="fw-bold mb-3">Choose Your Color</h5>
+
+            <input type="color" id="colorInput" class="form-control form-control-color mx-auto mb-3" value="#3498db"
+              title="Choose color">
+
+            <div id="colorPreview" class="p-5 rounded mb-3 border" style="background:#3498db;"></div>
+
+            <div class="input-group mb-3">
+              <input type="text" id="hexValue" class="form-control text-center fw-bold" value="#3498db" readonly>
+              <button class="btn btn-primary" onclick="copyHex()">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <small class="text-muted">Click copy to save HEX color code</small>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-</footer>
 
-<!-- SCRIPT -->
-<script>
-  const colorInput = document.getElementById('colorInput');
-  const colorPreview = document.getElementById('colorPreview');
-  const hexValue = document.getElementById('hexValue');
+  <!-- AD MIDDLE -->
+  <div class="container mb-4">
+    <div class="alert alert-secondary text-center">
+      Advertisement Space
+    </div>
+  </div>
 
-  colorInput.addEventListener('input', function () {
-    const color = this.value;
-    colorPreview.style.background = color;
-    hexValue.value = color;
-  });
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-3 mt-5">
+    <div class="container text-center">
+      <p class="mb-0 text-muted">
+        © <script type='text/javascript'>
+          var creditsyear = new Date();
+          document.write(creditsyear.getFullYear());
+        </script> ColorPicker Tool | Built with Bootstrap
+      </p>
+    </div>
+  </footer>
 
-  function copyHex() {
-    hexValue.select();
-    hexValue.setSelectionRange(0, 99999);
-    document.execCommand("copy");
+  <!-- SCRIPT -->
+  <script>
+    const colorInput = document.getElementById('colorInput');
+    const colorPreview = document.getElementById('colorPreview');
+    const hexValue = document.getElementById('hexValue');
 
-    const btn = document.querySelector("button.btn-primary");
-    const original = btn.innerHTML;
+    colorInput.addEventListener('input', function () {
+      const color = this.value;
+      colorPreview.style.background = color;
+      hexValue.value = color;
+    });
 
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
-    setTimeout(() => {
-      btn.innerHTML = original;
-    }, 1500);
-  }
-</script>
+    function copyHex() {
+      hexValue.select();
+      hexValue.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      const btn = document.querySelector("button.btn-primary");
+      const original = btn.innerHTML;
+
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+      setTimeout(() => {
+        btn.innerHTML = original;
+      }, 1500);
+    }
+  </script>
 
 </body>
+
 </html>

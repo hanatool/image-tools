@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free online crop image tool to crop photos easily with a modern responsive interface.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free online crop image tool to crop photos easily with a modern responsive interface.">
     <meta name="keywords" content="crop image, image cropper, photo crop tool, online image editor">
     <meta name="author" content="Crop Image Tool">
     <meta name="robots" content="index, follow">
@@ -14,14 +17,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
     <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">
-                    <i class="fa-solid fa-crop-simple me-2"></i>Crop Image
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-crop-simple text-primary me-2"></i>Crop Image
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -79,7 +83,7 @@
                         <div class="card-body p-4">
 
                             <h2 class="h4 fw-semibold mb-4">
-                                <i class="fa-solid fa-image me-2"></i>Crop Your Image
+                                <i class="fa-solid fa-image text-primary me-2"></i>Crop Your Image
                             </h2>
 
                             <div class="mb-4">
@@ -88,10 +92,8 @@
                             </div>
 
                             <div class="text-center mb-4">
-                                <img id="previewImage"
-                                     src="https://via.placeholder.com/800x450?text=Image+Preview"
-                                     class="img-fluid rounded border"
-                                     alt="Preview">
+                                <img id="previewImage" src="https://via.placeholder.com/800x450?text=Image+Preview"
+                                    class="img-fluid rounded border" alt="Preview">
                             </div>
 
                             <div class="row g-3 mb-4">
@@ -107,7 +109,7 @@
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex">
-                                <button class="btn btn-dark" id="cropButton">
+                                <button class="btn btn-primary" id="cropButton">
                                     <i class="fa-solid fa-scissors me-2"></i>Crop Image
                                 </button>
 
@@ -187,13 +189,13 @@
 
         let uploadedImage = null;
 
-        imageInput.addEventListener('change', function(event) {
+        imageInput.addEventListener('change', function (event) {
             const file = event.target.files[0];
 
             if (file) {
                 const reader = new FileReader();
 
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     previewImage.src = e.target.result;
                     uploadedImage = e.target.result;
                 };
@@ -202,7 +204,7 @@
             }
         });
 
-        cropButton.addEventListener('click', function() {
+        cropButton.addEventListener('click', function () {
             if (!uploadedImage) {
                 alert('Please upload an image first.');
                 return;
@@ -216,7 +218,7 @@
 
             const img = new Image();
 
-            img.onload = function() {
+            img.onload = function () {
                 canvas.width = width;
                 canvas.height = height;
 
@@ -238,7 +240,7 @@
             img.src = uploadedImage;
         });
 
-        downloadButton.addEventListener('click', function() {
+        downloadButton.addEventListener('click', function () {
             const link = document.createElement('a');
             link.download = 'cropped-image.png';
             link.href = previewImage.src;
@@ -247,4 +249,5 @@
     </script>
 
 </body>
+
 </html>

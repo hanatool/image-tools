@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Image to PDF Converter - Free Online Tool</title>
 
-    <meta name="description" content="Convert JPG, PNG, and WEBP images into PDF files instantly with this free online Image to PDF Converter." />
+    <meta name="description"
+        content="Convert JPG, PNG, and WEBP images into PDF files instantly with this free online Image to PDF Converter." />
     <meta name="keywords" content="image to pdf, jpg to pdf, png to pdf, online pdf converter, free pdf tool" />
     <meta name="author" content="Image to PDF Converter" />
     <meta name="robots" content="index, follow" />
@@ -15,12 +17,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body class="bg-light">
+
+<body class="bg-light text-dark">
 
     <!-- HEADER -->
     <header class="border-bottom bg-white sticky-top">
@@ -67,7 +70,8 @@
             </h1>
 
             <p class="text-secondary col-lg-7 mx-auto mb-4">
-                Easily convert JPG, PNG, WEBP, and other image formats into a high-quality PDF file directly in your browser. Fast, responsive, and completely free.
+                Easily convert JPG, PNG, WEBP, and other image formats into a high-quality PDF file directly in your
+                browser. Fast, responsive, and completely free.
             </p>
 
             <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -139,13 +143,8 @@
                                     Choose Images
                                 </label>
 
-                                <input 
-                                    type="file" 
-                                    class="form-control form-control-lg"
-                                    id="imageInput"
-                                    accept="image/*"
-                                    multiple
-                                >
+                                <input type="file" class="form-control form-control-lg" id="imageInput" accept="image/*"
+                                    multiple>
                             </div>
 
                             <div class="d-grid">
@@ -274,7 +273,9 @@
                 return;
             }
 
-            const { jsPDF } = window.jspdf;
+            const {
+                jsPDF
+            } = window.jspdf;
 
             const pdf = new jsPDF();
 
@@ -286,11 +287,11 @@
 
                 await new Promise((resolve) => {
 
-                    reader.onload = function(e) {
+                    reader.onload = function (e) {
 
                         const img = new Image();
 
-                        img.onload = function() {
+                        img.onload = function () {
 
                             const pdfWidth = pdf.internal.pageSize.getWidth();
                             const pdfHeight = (img.height * pdfWidth) / img.width;
@@ -326,4 +327,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

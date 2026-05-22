@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free online image resizer tool to resize photos instantly with modern responsive design.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free online image resizer tool to resize photos instantly with modern responsive design.">
     <meta name="keywords" content="image resizer, resize image online, photo resizer, image compressor">
     <meta name="author" content="Image Resizer">
     <meta name="theme-color" content="#ffffff">
@@ -16,14 +19,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+<body class="bg-light text-dark">
 
     <!-- HEADER -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
+    <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="#">
-                    <i class="fa-solid fa-image me-2"></i>Image Resizer
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-image text-primary me-2"></i>Image Resizer
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -67,8 +71,7 @@
             <div class="bg-white border rounded-4 p-4 text-center shadow-sm">
                 <small class="text-muted d-block mb-2">Advertisement</small>
 
-                <div class="d-flex justify-content-center align-items-center bg-light rounded-3"
-                     style="height:120px;">
+                <div class="d-flex justify-content-center align-items-center bg-light rounded-3" style="height:120px;">
                     <span class="text-secondary">
                         728x90 Ad Space
                     </span>
@@ -154,10 +157,13 @@
                         </h3>
 
                         <p class="text-secondary mb-0">
-                            This free online image resizer helps you quickly adjust image dimensions directly in your browser.
+                            This free online image resizer helps you quickly adjust image dimensions directly in your
+                            browser.
                             Whether you need to optimize photos for websites, social media posts, blog thumbnails,
-                            or profile pictures, this tool offers a clean and responsive experience on desktop and mobile devices.
-                            No installation required and your files stay private because processing happens locally in your browser.
+                            or profile pictures, this tool offers a clean and responsive experience on desktop and
+                            mobile devices.
+                            No installation required and your files stay private because processing happens locally in
+                            your browser.
                         </p>
                     </div>
 
@@ -172,7 +178,7 @@
                         <small class="text-muted d-block mb-2">Sponsored Area</small>
 
                         <div class="d-flex justify-content-center align-items-center bg-light rounded-3"
-                             style="height:250px;">
+                            style="height:250px;">
                             <span class="text-secondary">
                                 300x250 Ad Space
                             </span>
@@ -193,7 +199,10 @@
             </p>
 
             <small class="text-secondary">
-                © 2026 All Rights Reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
             </small>
         </div>
     </footer>
@@ -213,17 +222,17 @@
 
         let uploadedImage = null;
 
-        imageInput.addEventListener('change', function(event) {
+        imageInput.addEventListener('change', function (event) {
             const file = event.target.files[0];
 
             if (!file) return;
 
             const reader = new FileReader();
 
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 uploadedImage = new Image();
 
-                uploadedImage.onload = function() {
+                uploadedImage.onload = function () {
                     widthInput.value = uploadedImage.width;
                     heightInput.value = uploadedImage.height;
 
@@ -239,7 +248,7 @@
             reader.readAsDataURL(file);
         });
 
-        resizeBtn.addEventListener('click', function() {
+        resizeBtn.addEventListener('click', function () {
             if (!uploadedImage) {
                 alert('Please upload an image first.');
                 return;
@@ -266,4 +275,5 @@
     </script>
 
 </body>
+
 </html>

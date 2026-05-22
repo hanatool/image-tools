@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AI Image Caption Generator helps you create smart captions for your images instantly with a modern responsive interface." />
+    <meta name="description"
+        content="AI Image Caption Generator helps you create smart captions for your images instantly with a modern responsive interface." />
     <meta name="keywords" content="AI Caption Generator, Image Caption, AI Tool, Photo Caption Generator" />
     <meta name="author" content="AI Image Caption Generator" />
     <meta name="theme-color" content="#ffffff" />
@@ -13,14 +15,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body class="bg-light">
+
+<body class="bg-light text-dark">
 
     <!-- HEADER -->
     <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">
-                    <i class="fa-solid fa-image me-2"></i>
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-image text-primary me-2"></i>
                     AI Image Caption Generator
                 </a>
 
@@ -85,7 +88,7 @@
                         <div class="card-body p-4">
 
                             <h3 class="fw-semibold mb-4">
-                                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                <i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>
                                 AI Caption Generator
                             </h3>
 
@@ -94,20 +97,12 @@
                                     Upload Image
                                 </label>
 
-                                <input
-                                    type="file"
-                                    class="form-control form-control-lg"
-                                    id="imageInput"
-                                    accept="image/*"
-                                />
+                                <input type="file" class="form-control form-control-lg" id="imageInput"
+                                    accept="image/*" />
                             </div>
 
                             <div class="mb-4 text-center">
-                                <img
-                                    id="previewImage"
-                                    class="img-fluid rounded-4 border d-none"
-                                    alt="Preview"
-                                />
+                                <img id="previewImage" class="img-fluid rounded-4 border d-none" alt="Preview" />
                             </div>
 
                             <div class="mb-4">
@@ -125,10 +120,7 @@
                                 </select>
                             </div>
 
-                            <button
-                                class="btn btn-dark btn-lg w-100"
-                                id="generateBtn"
-                            >
+                            <button class="btn btn-primary btn-lg w-100" id="generateBtn">
                                 <i class="fa-solid fa-bolt me-2"></i>
                                 Generate Caption
                             </button>
@@ -159,7 +151,7 @@
                             </h5>
 
                             <div class="border rounded-4 bg-light d-flex align-items-center justify-content-center"
-                                 style="height: 250px;">
+                                style="height: 250px;">
                                 <div>
                                     <i class="fa-solid fa-rectangle-ad fa-3x mb-3 text-secondary"></i>
                                     <p class="text-secondary mb-0">
@@ -318,4 +310,5 @@
     </script>
 
 </body>
+
 </html>

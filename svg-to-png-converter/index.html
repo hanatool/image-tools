@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free SVG to PNG Converter tool. Convert SVG images into PNG format instantly online with fast and responsive interface.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free SVG to PNG Converter tool. Convert SVG images into PNG format instantly online with fast and responsive interface.">
     <meta name="keywords" content="SVG to PNG Converter, Convert SVG, PNG Generator, Online Converter">
     <meta name="author" content="SVG Converter">
     <meta name="theme-color" content="#ffffff">
@@ -13,13 +16,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- HEADER -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
+    <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light container ">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="fa-solid fa-image me-2"></i>SVG to PNG
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-image text-primary me-2"></i>SVG to PNG
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -52,7 +56,8 @@
                 <div class="col-lg-8">
                     <h1 class="fw-bold mb-3">Free SVG to PNG Converter</h1>
                     <p class="lead text-secondary">
-                        Convert SVG files into high-quality PNG images instantly using this modern online converter tool.
+                        Convert SVG files into high-quality PNG images instantly using this modern online converter
+                        tool.
                         Fast, responsive, and easy to use directly from your browser.
                     </p>
                 </div>
@@ -89,7 +94,8 @@
 
                             <div class="mb-4">
                                 <label class="form-label fw-semibold">Choose SVG File</label>
-                                <input type="file" id="svgFile" class="form-control form-control-lg" accept=".svg,image/svg+xml">
+                                <input type="file" id="svgFile" class="form-control form-control-lg"
+                                    accept=".svg,image/svg+xml">
                             </div>
 
                             <div class="d-grid mb-4">
@@ -108,7 +114,8 @@
                                 </div>
 
                                 <div class="d-grid">
-                                    <a id="downloadBtn" class="btn btn-success btn-lg rounded-3" download="converted-image.png">
+                                    <a id="downloadBtn" class="btn btn-success btn-lg rounded-3"
+                                        download="converted-image.png">
                                         <i class="fa-solid fa-download me-2"></i>Download PNG
                                     </a>
                                 </div>
@@ -124,7 +131,8 @@
                             This SVG to PNG Converter allows you to quickly transform scalable vector graphics into
                             PNG image files directly in your browser without uploading files to external servers.
                             The tool is lightweight, responsive, secure, and optimized for desktop and mobile devices.
-                            Perfect for designers, developers, bloggers, and content creators who need fast image conversion.
+                            Perfect for designers, developers, bloggers, and content creators who need fast image
+                            conversion.
                         </p>
                     </div>
 
@@ -163,7 +171,10 @@
             </div>
 
             <p class="small text-secondary mb-0">
-                © 2026 SVG to PNG Converter. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> SVG to PNG Converter. All rights reserved.
             </p>
         </div>
     </footer>
@@ -182,12 +193,12 @@
 
             const reader = new FileReader();
 
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 const svgData = event.target.result;
 
                 const img = new Image();
 
-                img.onload = function() {
+                img.onload = function () {
                     const canvas = document.createElement('canvas');
                     canvas.width = img.width || 500;
                     canvas.height = img.height || 500;
@@ -211,4 +222,5 @@
     </script>
 
 </body>
+
 </html>
