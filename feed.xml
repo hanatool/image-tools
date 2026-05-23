@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title>Hanapha Image Tools</title>
+    <link>https://tools.hanapha.com/image-tools/</link>
+
+    <description>
+      Free online image tools for editing, converting, compressing, enhancing, resizing, watermarking, and AI-powered image processing directly in your browser.
+    </description>
+
+    <language>en-us</language>
+
+    <item>
+      <title>AI Face Blur</title>
+      <link>https://tools.hanapha.com/image-tools/ai-face-blur</link>
+      <description>Automatically blur faces in images using AI.</description>
+    </item>
+
+    <item>
+      <title>AI Image Caption Generator</title>
+      <link>https://tools.hanapha.com/image-tools/ai-image-caption-generator</link>
+      <description>Generate image captions automatically with AI.</description>
+    </item>
+
+    <item>
+      <title>AI Image Enhancer</title>
+      <link>https://tools.hanapha.com/image-tools/ai-image-enhancer</link>
+      <description>Enhance image quality using AI technology.</description>
+    </item>
+
+    <item>
+      <title>AI Object Remover</title>
+      <link>https://tools.hanapha.com/image-tools/ai-object-remover</link>
+      <description>Remove unwanted objects from images online.</description>
+    </item>
+
+    <item>
+      <title>Background Remover</title>
+      <link>https://tools.hanapha.com/image-tools/background-remover</link>
+      <description>Remove image backgrounds instantly online.</description>
+    </item>
+
+    <item>
+      <title>Base64 to Image</title>
+      <link>https://tools.hanapha.com/image-tools/base64-to-image</link>
+      <description>Convert Base64 strings into image files.</description>
+    </item>
+
+    <item>
+      <title>Blur Image Tool</title>
+      <link>https://tools.hanapha.com/image-tools/blur-image-tool</link>
+      <description>Blur photos and images easily online.</description>
+    </item>
+
+    <item>
+      <title>Color Picker</title>
+      <link>https://tools.hanapha.com/image-tools/color-picker</link>
+      <description>Pick colors and generate HEX or RGB values.</description>
+    </item>
+
+    <item>
+      <title>Crop Image</title>
+      <link>https://tools.hanapha.com/image-tools/crop-image</link>
+      <description>Crop and trim images directly in your browser.</description>
+    </item>
+
+    <item>
+      <title>EXIF Viewer</title>
+      <link>https://tools.hanapha.com/image-tools/exif-viewer</link>
+      <description>View image metadata and EXIF information online.</description>
+    </item>
+
+    <item>
+      <title>GIF Maker</title>
+      <link>https://tools.hanapha.com/image-tools/gif-maker</link>
+      <description>Create animated GIFs from images online.</description>
+    </item>
+
+    <item>
+      <title>HEIC to JPG</title>
+      <link>https://tools.hanapha.com/image-tools/heic-to-jpg</link>
+      <description>Convert HEIC images into JPG format instantly.</description>
+    </item>
+
+    <item>
+      <title>ICO Generator</title>
+      <link>https://tools.hanapha.com/image-tools/ico-generator</link>
+      <description>Create favicon ICO files online easily.</description>
+    </item>
+
+    <item>
+      <title>Image Compressor</title>
+      <link>https://tools.hanapha.com/image-tools/image-compressor</link>
+      <description>Compress image files to reduce file size.</description>
+    </item>
+
+    <item>
+      <title>Image Converter</title>
+      <link>https://tools.hanapha.com/image-tools/image-converter</link>
+      <description>Convert images into multiple file formats online.</description>
+    </item>
+
+    <item>
+      <title>Image Resizer</title>
+      <link>https://tools.hanapha.com/image-tools/image-resizer</link>
+      <description>Resize images quickly while maintaining quality.</description>
+    </item>
+
+    <item>
+      <title>Image to PDF</title>
+      <link>https://tools.hanapha.com/image-tools/image-to-pdf</link>
+      <description>Convert image files into PDF documents online.</description>
+    </item>
+
+    <item>
+      <title>Image Upscaler</title>
+      <link>https://tools.hanapha.com/image-tools/image-upscaler</link>
+      <description>Upscale and improve image resolution using AI.</description>
+    </item>
+
+    <item>
+      <title>JPG to PNG</title>
+      <link>https://tools.hanapha.com/image-tools/jpg-to-png</link>
+      <description>Convert JPG images into PNG format instantly.</description>
+    </item>
+
+    <item>
+      <title>Meme Generator</title>
+      <link>https://tools.hanapha.com/image-tools/meme-generator</link>
+      <description>Create custom memes online with ease.</description>
+    </item>
+
+    <item>
+      <title>OCR Image to Text</title>
+      <link>https://tools.hanapha.com/image-tools/ocr-image-to-text</link>
+      <description>Extract text from images using OCR technology.</description>
+    </item>
+
+    <item>
+      <title>Photo Filters</title>
+      <link>https://tools.hanapha.com/image-tools/photo-filters</link>
+      <description>Apply creative filters and effects to photos.</description>
+    </item>
+
+    <item>
+      <title>PNG to JPG</title>
+      <link>https://tools.hanapha.com/image-tools/png-to-jpg</link>
+      <description>Convert PNG images into JPG format online.</description>
+    </item>
+
+    <item>
+      <title>SVG Converter</title>
+      <link>https://tools.hanapha.com/image-tools/svg-converter</link>
+      <description>Convert SVG files into multiple image formats.</description>
+    </item>
+
+    <item>
+      <title>SVG to PNG Converter</title>
+      <link>https://tools.hanapha.com/image-tools/svg-to-png-converter</link>
+      <description>Convert SVG graphics into PNG images instantly.</description>
+    </item>
+
+    <item>
+      <title>Watermark Tool</title>
+      <link>https://tools.hanapha.com/image-tools/watermark-tool</link>
+      <description>Add text or image watermarks to photos online.</description>
+    </item>
+
+    <item>
+      <title>WEBP Converter</title>
+      <link>https://tools.hanapha.com/image-tools/webp-converter</link>
+      <description>Convert images into WEBP format online.</description>
+    </item>
+
+    <item>
+      <title>WEBP to JPG</title>
+      <link>https://tools.hanapha.com/image-tools/webp-to-jpg</link>
+      <description>Convert WEBP images into JPG format instantly.</description>
+    </item>
+
+  </channel>
+
+</rss>

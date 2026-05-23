@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tools.hanapha.com/image-tools/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url><loc>https://tools.hanapha.com/image-tools/ai-face-blur</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/ai-image-caption-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/ai-image-enhancer</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/ai-object-remover</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/background-remover</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/base64-to-image</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/blur-image-tool</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/color-picker</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/crop-image</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/exif-viewer</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/gif-maker</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/heic-to-jpg</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/ico-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-background-remover</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-compressor</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-converter</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-cropper</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-metadata-cleaner</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-resizer</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-to-base64</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-to-pdf</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-upscaler</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/image-watermark-tool</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/jpg-to-png</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/meme-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/ocr-image-to-text</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/photo-filters</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/png-to-jpg</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/resize-image</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/screenshot-to-pdf</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/svg-converter</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/svg-to-png-converter</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/watermark-tool</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/webp-converter</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/webp-to-jpg</loc></url>
+
+  <url><loc>https://tools.hanapha.com/image-tools/404.html</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/index.html</loc></url>
+  <url><loc>https://tools.hanapha.com/image-tools/README.md</loc></url>
+
+</urlset>
